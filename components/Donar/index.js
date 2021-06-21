@@ -1,0 +1,54 @@
+import styles from "./index.module.css";
+
+export default function Donar(){
+  return (
+    <section className={styles.container}>
+      <div id="banner_ayudemos" className={styles.banner}>
+        <p>Ayudemos a los que nos cuidan!</p>
+      </div>
+
+      <p id="donacion_voluntaria" className={styles.text}>
+        Hacé hoy una DONACION VOLUNTARIA para colaborar 
+        con la compra de materiales para esta pandemia.
+      </p>
+
+      <div id="aporte_fundamental" className={styles.aporte}>
+        <p>¡Tu aporte es fundamental!</p>
+      </div>
+
+      <p id="podes"  className={styles.text}>Podés hacerlo mediante una transferencia o deposito a: </p>
+
+      <div id="datos_bancarios" className={styles.banner_bank} > 
+        <div>
+          <p>CUENTA CTE. BANCO PROVINCIA: <strong>5029-6693/6</strong></p>
+          <p>TITULAR: <strong>Asociacion Cooperadora Htal. Lucio Melendez</strong></p>
+          <p>CBU: <strong>0140082301502900669363</strong></p>
+          {/* <p>CVU: <strong>0000003100057315699140</strong></p> */}
+          <p>ALIAS: <strong>coop.lucio.melendez</strong></p>
+          <p>CIUT: <strong>33-67621770-9</strong></p>
+        </div>
+      </div>
+
+      <div id="mercadopago" className={styles.mercadopago_wrapper}>
+        <div className={styles.mercadopago_logo_wrapper} >
+          <p>Tambien podés donar desde tu telefono escaneando el código QR mediante</p>
+          <img id="mercadopago_logo" src="/images/mercadopago_logo.png"
+            alt="mercadopago logo"/>
+        </div>
+          <img className={styles.mercadopago_qr} src="/images/mercadopago_qr.png"
+            alt="mercadopago qr"/>
+      </div>
+
+      <div  className={styles.consultas}>
+        <a 
+          href="mailto:cooperadoraluciomelendez@gmail.com?
+          Subject=Consulta%20desde%20la%20pagina">
+          <p>Consultas: cooperadoraluciomelendez@gmail.com</p>
+        </a>
+      </div>
+
+
+    </section>
+    
+    )
+}

@@ -1,0 +1,108 @@
+.container{
+  width: 100%;
+  max-width: 1200px;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.banner{
+  width: 105%;
+  background-color: hsl(213deg 87% 21%);
+}
+
+.banner p {
+  max-width: 1200px;
+  text-align: center;
+  color: #fafafa;
+  font-size: 3em;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.aporte{
+  composes: banner;
+  border-radius: 100px;
+  width: 90%;
+  padding: 0px 0.5rem;
+}
+
+.aporte > p{
+  font-size: 2.5em;
+  margin: 0px;
+  text-transform: none;
+}
+
+.text{
+  padding: 10px;
+  background-color: #fafafa;
+  text-align: center;
+  color: hsl(213deg 87% 21%);
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.banner_bank{
+  composes: banner;
+}
+
+.banner_bank > div {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.banner_bank p{
+  text-align: left;
+  font-size: 1.5em;
+  font-weight: 300;
+  text-transform: none;
+  margin: 10px auto
+}
+
+.mercadopago_wrapper{
+  composes: text;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+}
+
+.mercadopago_wrapper p{
+  margin: 0px;
+}
+
+.mercadopago_logo_wrapper{
+  flex-grow: 1;
+}
+
+.mercadopago_logo_wrapper img{
+  margin-top: 20px;
+}
+
+.mercadopago_qr {
+  display: block;
+  margin:auto;
+  margin-top: 20px;
+}
+
+.consultas{
+  composes: aporte;
+  padding: 10px;
+  text-align: center;
+  font-weight: 600;
+  margin: 0px;
+}
+
+.consultas p{
+  margin: 0px;
+  font-size: 0.75rem;
+  text-transform: none;
+}
+
+@media (max-width: 768px) {
+  .mercadopago_wrapper{
+    flex-direction: column;
+  }
+}
