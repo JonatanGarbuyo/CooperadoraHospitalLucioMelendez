@@ -1,6 +1,6 @@
 import styles from "./index.module.css";
 
-export default function Donar(){
+export default function Banner(){
   return (
     <section className={styles.container}>
       <div id="banner_ayudemos" className={styles.banner}>
@@ -42,7 +42,7 @@ export default function Donar(){
       <div  className={styles.consultas}>
         <a 
           href="mailto:cooperadoraluciomelendez@gmail.com?
-          Subject=Consulta%20desde%20la%20pagina">
+          subject=Consulta%20desde%20la%20pagina">
           <p>Consultas: cooperadoraluciomelendez@gmail.com</p>
         </a>
       </div>

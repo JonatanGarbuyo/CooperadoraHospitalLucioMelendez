@@ -1,19 +1,23 @@
 import styles from "./index.module.css";
 import {useState} from "react";
 
-export default function Header() {
 
+export default function Header() {
   const [showNavMenu, setShowNavMenu] = useState(false);
+
   const navToggle = () => {
     setShowNavMenu(!showNavMenu)
   }
   
-  const navItems = ["Nosotros", "historia", "Donar", "Contacto"]
+  const navItems = ["Nosotros", "Historia", "Donar", "Contacto"]
+
   const listItems = navItems.map((item, index) => (
     <li key={`item-${index}`} className={styles.menu_item}>
       <a className={styles.menu_item_a} 
-        // href={`/${item}`}
-        >{item}</a>
+        href={ item==="Donar"? `/${item}`: null } 
+      > 
+        {item}
+      </a>
     </li>
   ))
 
@@ -62,12 +66,9 @@ export default function Header() {
               />
             </a>
           </div>
-          
-          {/* <div className={styles.main_menu_wrapper}> */}
             <ul id="main_menu" className={styles.main_menu}>
               {listItems}
             </ul>
-          {/* </div> */}
 
 
         </div>
