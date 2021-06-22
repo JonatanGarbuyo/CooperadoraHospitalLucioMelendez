@@ -1,0 +1,7 @@
+.footer{
+  composes: footer from "/styles/Home.module.css";
+}
+
+.logo{
+  composes: logo from "/styles/Home.module.css";
+}
