@@ -10,6 +10,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-bottom: 2em;
 }
 
 .quiero_donar{
@@ -152,24 +153,6 @@
   padding: .375rem .75rem;
   margin: 0 0.5rem;
   display: none;
-}
-
-
-
-.svg_icon {
-  width: 1em;
-  height: 1em;
-}
-
-.svg_icon path,
-.svg_icon polygon,
-.svg_icon rect {
-  fill: hsl(213deg 87% 21%);
-}
-
-.svg_icon circle {
-  stroke: hsl(213deg 87% 21%);
-  stroke-width: 1;
 }
 
 

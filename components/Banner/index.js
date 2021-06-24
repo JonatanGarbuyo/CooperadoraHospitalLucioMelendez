@@ -1,3 +1,4 @@
+import SocialShare from "../SocialShare";
 import styles from "./index.module.css";
 
 export default function Banner(){
@@ -48,6 +49,7 @@ export default function Banner(){
       </div>
 
 
+      <SocialShare />
     </section>
     
     )

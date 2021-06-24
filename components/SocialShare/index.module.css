@@ -1,0 +1,39 @@
+.social_share{
+  padding-top: 1rem;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.social_share p{
+  font-size: 1.5rem
+}
+
+.social_share_list{
+  /* flex-grow: 1; */
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.social_share_list_item{
+  padding: 1rem 
+}
+
+.logo {
+  height: 2.5rem;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .social_share{
+    flex-direction: column;
+  }
+
+  .social_share_list{
+    padding: 0;
+  }
+}

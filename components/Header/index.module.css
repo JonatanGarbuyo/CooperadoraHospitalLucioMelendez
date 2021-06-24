@@ -12,9 +12,9 @@
 }
 
 .nav_mobile{
-    display: none;
-    justify-content: space-between;
-    align-items: center;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav_mobile_close_button{
@@ -27,7 +27,6 @@
   flex-direction: column;
   justify-content: center;
   cursor: pointer;
-  /* border: 1px solid green; */
   padding: 5px;
 }
 
@@ -124,7 +123,7 @@
     transition-timing-function: ease-out;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
   }
 
   .logo_wraper{
@@ -168,7 +167,7 @@
     /* color para el link seleccionado */
     /* color: #028231; */
     margin: 10px;
-    padding: 25px 15px;
+    padding: 10px 15px;
   }
 }
 
