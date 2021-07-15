@@ -4,7 +4,7 @@ export default function SocialShare() {
   return (
     
     <div className={styles.social_share}>
-      <p>Compartir en redes sociales</p>
+      <p>Ayudanos a llegar a mas gente. <br/>Compartí en tus redes sociales</p>
       <ul className={styles.social_share_list}>
         <li className={styles.social_share_list_item}>
           <a href="http://www.facebook.com/sharer/sharer.php?u=https://cooperadoraluciomelendez.org.ar/Donar&amp;title=Cooperadora Lucio Melendez" 

@@ -14,7 +14,7 @@ export default function Header() {
   const listItems = navItems.map((item, index) => (
     <li key={`item-${index}`} className={styles.menu_item}>
       <a className={styles.menu_item_a} 
-        href={ item==="Donar"? `/${item}`: null } 
+        href={ item==="Donar" || item==="Nosotros"? `/${item}`: null } 
       > 
         {item}
       </a>

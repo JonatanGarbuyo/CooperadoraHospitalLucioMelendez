@@ -44,6 +44,7 @@
   display: flex;
   justify-content: space-around;
   flex-direction: row;
+  z-index: 9999;
 }
 
 .logo_wraper{
@@ -90,7 +91,6 @@
 
   .nav_mobile{
     display:flex;
-    align-items: space-between;
   }
 
   .nav_mobile_close_button{

@@ -1,0 +1,112 @@
+.container{
+  composes: container from "/styles/Home.module.css";
+}
+
+.quienes_container{
+  width: 100%;
+  max-width: 1200px;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 2em;
+}
+
+.la_cooperadora{
+  width: 100%;
+  height: 40vh;
+  background-color: hsl(213deg 87% 21%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url('/images/frente_del_hospital.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+}
+
+.la_cooperadora  h1 {
+  font-size: 3rem;
+}
+
+
+
+
+
+.botones_donaciones{
+  max-width: 90%;
+}
+
+.botones_donaciones > p {
+  color: hsl(213deg 87% 21%);
+  background-color: #fafafa;
+  padding: 10px;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+
+
+
+.contacto{
+  font-size: 2rem;
+  width: 80%;
+  text-align: center;
+}
+
+.contacto h3 {
+  font-size: 2rem;
+}
+
+.contacto form{
+  display: flex;
+  flex-direction: column;
+}
+
+.contacto form div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 1rem;
+}
+
+.contacto input{
+  font-size: 0.5em;
+  height: 50px;
+  width: 100%;
+  padding: .375rem .75rem;
+  margin: 0 0.5rem;
+  border: 1px solid #e7e7e7;
+}
+  
+.consulta svg{
+  align-self: flex-start;
+  margin-top: 1rem;
+}
+
+.consulta textarea{
+  font-size: 0.5em;
+  width: 100%;
+  padding: .375rem .75rem;
+  margin: 0 0.5rem;
+  border: 1px solid #e7e7e7;
+  height: 176px;
+  font: 400 0.5em Arial;
+}
+
+
+
+@media (max-width: 768px) {
+  .botones_donaciones > p {
+    font-size: 1em;
+  }
+
+  .contacto h3 {
+    font-size: 1rem;
+  }
+}

@@ -7,7 +7,8 @@
 }
 
 .social_share p{
-  font-size: 1.5rem
+  font-size: 1.5rem;
+  padding-left: 1rem;
 }
 
 .social_share_list{

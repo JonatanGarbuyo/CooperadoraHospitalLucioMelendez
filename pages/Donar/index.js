@@ -36,27 +36,27 @@ export default function Donar() {
             con nuestra misión como Institución.
           </p>
           <div id="botones_donaciones_wrapper" className={styles.botones_donaciones_wrapper}>
-            <a href="https://mpago.la/2eRw8YF" style={{"background-color":"#4d95be;"}}>
+            <a href="https://mpago.la/2eRw8YF" target="_blank" style={{"background-color":"#4d95be;"}}>
               Donación por única vez
               <p>$500</p>
               quinientos pesos
             </a>  
-            <a  href="https://mpago.la/2BFVwq7" style={{"background-color":"#0067a2;"}}>
+            <a  href="https://mpago.la/2BFVwq7" target="_blank" style={{"background-color":"#0067a2;"}}>
               Donación por única vez
               <p>$1000</p>
               mil pesos
             </a>  
-            <a  href="https://mpago.la/1sDpGAy" style={{"background-color":"#15b4b5;"}}>
+            <a  href="https://mpago.la/1sDpGAy" target="_blank" style={{"background-color":"#15b4b5;"}}>
               Donación por única vez
               <p>$3000</p>
               tres mil pesos
             </a>  
-            <a  href="https://mpago.la/11TABB1" style={{"background-color":"#159b97;"}}>
+            <a  href="https://mpago.la/11TABB1" target="_blank" style={{"background-color":"#159b97;"}}>
               Donación por única vez
               <p>$5000</p>
               cinco mil pesos
             </a>
-            <a  href="" className={styles.mensual}>
+            <a  href="" target="_blank" className={styles.mensual}>
               Donaciones por 
               <p>SUSCRIPCION MENSUAL</p>
             </a>
