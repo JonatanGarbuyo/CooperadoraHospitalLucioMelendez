@@ -11,9 +11,10 @@
   align-items: center;
   flex-direction: column;
   padding-bottom: 2em;
+  font-size: 1.5em;
 }
 
-.la_cooperadora{
+.titulo{
   width: 100%;
   height: 40vh;
   background-color: hsl(213deg 87% 21%);
@@ -29,80 +30,50 @@
   opacity: 0.8;
 }
 
-.la_cooperadora  h1 {
+.titulo  h1 {
   font-size: 3rem;
 }
 
-
-
-
-
-.botones_donaciones{
+.la_cooperadora{
   max-width: 90%;
 }
 
-.botones_donaciones > p {
+.la_cooperadora > p {
   color: hsl(213deg 87% 21%);
   background-color: #fafafa;
   padding: 10px;
-  font-size: 2em;
   font-weight: 600;
 }
 
 
-
-
-.contacto{
-  font-size: 2rem;
-  width: 80%;
-  text-align: center;
+.nosotros {
+  max-width: 90%;
 }
 
-.contacto h3 {
-  font-size: 2rem;
+.nosotros > h3 {
+  color: hsl(213deg 87% 21%);
+  background-color: #fafafa;
+  padding: 10px;
+  font-weight: 600;
+  margin-bottom: 0;
 }
 
-.contacto form{
-  display: flex;
-  flex-direction: column;
+.nosotros > p {
+  color: hsl(213deg 87% 21%);
+  background-color: #fafafa;
+  padding: 10px;
 }
 
-.contacto form div{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  margin: 1rem;
-}
-
-.contacto input{
-  font-size: 0.5em;
-  height: 50px;
+.firma{
   width: 100%;
-  padding: .375rem .75rem;
-  margin: 0 0.5rem;
-  border: 1px solid #e7e7e7;
-}
-  
-.consulta svg{
-  align-self: flex-start;
-  margin-top: 1rem;
+  text-align: right;
 }
 
-.consulta textarea{
-  font-size: 0.5em;
-  width: 100%;
-  padding: .375rem .75rem;
-  margin: 0 0.5rem;
-  border: 1px solid #e7e7e7;
-  height: 176px;
-  font: 400 0.5em Arial;
-}
 
 
 
 @media (max-width: 768px) {
-  .botones_donaciones > p {
+  .la_cooperadora > p {
     font-size: 1em;
   }
 
