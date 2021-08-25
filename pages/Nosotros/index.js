@@ -78,7 +78,7 @@ export default function Donar() {
             se entregan en las distintas salas, a los pacientes internados que necesiten.
           </p>
 
-          <h3>¿Cómo lo hacemos posible todo esto?</h3>
+          <h3>¿Cómo hacemos posible todo esto?</h3>
           <p>Nuestra principal fuente de recursos son: La invalorable ayuda de los socios Adherentes y Activos que aportan una cuota 
             mensual, las Donaciones voluntarias tanto de dinero como de materiales de los vecinos, pacientes, comerciantes y 
             empresas de nuestra comunidad. Con la realización de campañas de recaudación a tal efecto, sumado el ingreso mensual 
@@ -97,7 +97,7 @@ export default function Donar() {
             y con el incansable esfuerzo y sacrificio que hacen nuestros compañeros del Hospital Lucio Meléndez, que pese a 
             las dificultades diarias nunca dejan de brindarse al máximo para con el prójimo, y pese a todo nunca bajan los brazos. 
             <br/>Nuestros logros no serian posibles sin el trabajo en equipo que realizamos en conjunto con la Dirección de nuestro 
-            Hospital, y principalmente del esfuerzo de los servicios de Mantenimiento, Limpieza y Depósito. <strong>¡A todos ellos 
+            Hospital, y principalmente del esfuerzo de los Medicos, Enfermeros, los servicios de Mantenimiento, Limpieza y Depósito. <strong>¡A todos ellos 
             les decimos Muchas Gracias de Corazón!</strong>
           </p>
           <p>Por lo expresado anteriormente, analizando dificultades y logros, estamos conformes con nuestra labor, 

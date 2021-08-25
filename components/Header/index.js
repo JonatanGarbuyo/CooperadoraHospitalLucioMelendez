@@ -9,12 +9,18 @@ export default function Header() {
     setShowNavMenu(!showNavMenu)
   }
   
-  const navItems = ["Nosotros", "Historia", "Donar", "Contacto"]
+  const navItems = [
+    "Home",
+    "Nosotros",
+    // "Historia", 
+    "Donar", 
+    // "Contacto"
+  ]
 
   const listItems = navItems.map((item, index) => (
     <li key={`item-${index}`} className={styles.menu_item}>
       <a className={styles.menu_item_a} 
-        href={ item==="Donar" || item==="Nosotros"? `/${item}`: null } 
+        href={ item==="Home"? "/" : `/${item}`} 
       > 
         {item}
       </a>

@@ -25,8 +25,9 @@ export default function Banner(){
           <p>TITULAR: <strong>Asociacion Cooperadora Htal. Lucio Melendez</strong></p>
           <p>CBU: <strong>0140082301502900669363</strong></p>
           {/* <p>CVU: <strong>0000003100057315699140</strong></p> */}
-          <p>ALIAS: <strong>coop.lucio.melendez</strong></p>
-          <p>CIUT: <strong>33-67621770-9</strong></p>
+          {/* <p>ALIAS: <strong>coop.lucio.melendez</strong></p> */}
+          <p>ALIAS: <strong>asoc.coop.melendez</strong></p>
+          <p>CUIT: <strong>33-67621770-9</strong></p>
         </div>
       </div>
 
