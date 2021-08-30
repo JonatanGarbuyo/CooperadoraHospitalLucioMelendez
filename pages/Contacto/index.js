@@ -51,7 +51,6 @@ export default function Donar() {
       </Head>
       <Header />
 
-
       <div className={styles.form_container}>
         <section id="contacto" className={styles.contacto}>
           <h1>Contacto</h1>
@@ -95,11 +94,7 @@ export default function Donar() {
             </div>
             
           </form>
-          
-          
-
         </section>
-
       </div>
 
       <Footer />
