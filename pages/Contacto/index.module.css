@@ -2,7 +2,7 @@
   composes: container from "/styles/Home.module.css";
 }
 
-.donar_container{
+.form_container{
   width: 100%;
   max-width: 1200px;
   background-color: #fafafa;
@@ -10,10 +10,9 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-bottom: 2em;
 }
 
-.quiero_donar{
+.contacto{
   width: 105%;
   height: 70vh;
   background-color: hsl(213deg 87% 21%);
@@ -21,85 +20,13 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-}
-
-.quiero_donar div {
-  margin-top: 2em;
-  max-width: 100%;
   text-align: center;
   font-size: 3em;
   font-weight: 500;
 }
 
-.quiero_donar div, .quiero_donar h1 {
+.contacto h1{
   margin: auto;
-}
-
-.quiero_donar p {
-  border-radius: 100px;
-  padding: 0.5rem 1rem;
-  background-color: #08963a;
-  font-size: 0.5em;
-  text-transform: none;
-}
-
-
-
-.botones_donaciones{
-  max-width: 90%;
-}
-
-.botones_donaciones > p {
-  color: hsl(213deg 87% 21%);
-  background-color: #fafafa;
-  padding: 10px;
-  font-size: 2em;
-  font-weight: 600;
-}
-
-.botones_donaciones_wrapper{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  text-align: center;
-  color: #fafafa;
-  font-weight: 500;
-  margin: 2rem;
-}
-
-.botones_donaciones_wrapper a {
-  width: 140px;
-  height: 140px;
-  padding: 6px 1px;
-  transition-duration: 1s;
-  box-shadow: 0px 34px 23px -17px rgb(0 0 0 / 65%);
-  margin: 1rem;
-}
-
-.botones_donaciones_wrapper p {
-  font-size: 2em;
-  margin: 10px;
-}
-
-.mensual{
-  background-color:#08963a;
-}
-
-.mensual p{
-  font-size: 1.2em;
-  margin: 30px 0;
-}
-
-
-
-.contacto{
-  font-size: 2rem;
-  width: 80%;
-  text-align: center;
-}
-
-.contacto h3 {
-  font-size: 2rem;
 }
 
 .contacto form{
@@ -110,8 +37,8 @@
 .contacto form div{
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: flex-end;
   margin: 1rem;
 }
 
@@ -119,27 +46,38 @@
   font-size: 0.5em;
   height: 50px;
   width: 100%;
-  padding: .375rem .75rem;
   margin: 0 0.5rem;
-  border: 1px solid #e7e7e7;
-}
-  
-.consulta svg{
-  align-self: flex-start;
-  margin-top: 1rem;
+  border: none;
 }
 
-.consulta textarea{
+.contacto textarea{
   font-size: 0.5em;
   width: 100%;
   padding: .375rem .75rem;
   margin: 0 0.5rem;
-  border: 1px solid #e7e7e7;
   height: 176px;
   font: 400 0.5em Arial;
+  border: none;
 }
 
-.submit{
+.form_div{
+  background-color: #fff
+}
+
+.form_input{
+  background-color: #fff;
+}
+
+.form_icon{
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.submit_div{
+  background-color: transparent;
+}
+
+.submit_button{
   background-color:#08963a;
   color: #fafafa;
   margin: 10px;
@@ -158,13 +96,15 @@
 
 
 @media (max-width: 768px) {
-  .botones_donaciones > p {
-    padding: 10px;
-    font-size: 1.5em;
-    font-weight: 500;
-  }
-
+  
   .contacto h3 {
     font-size: 1rem;
+  }
+  
+  .contacto h1{
+    font-size: 1em;
+  }
+  .contacto form div{
+    justify-content: center;
   }
 }

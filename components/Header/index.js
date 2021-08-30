@@ -14,7 +14,7 @@ export default function Header() {
     "Nosotros",
     // "Historia", 
     "Donar", 
-    // "Contacto"
+    "Contacto"
   ]
 
   const listItems = navItems.map((item, index) => (
