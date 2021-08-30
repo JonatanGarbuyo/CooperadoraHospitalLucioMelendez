@@ -15,9 +15,13 @@ export default async (req, res) => {
     html: message.replace(/\r\n/g, "<br />")
   }
 
-  mail.send(data)
-  .then((response) => {
-    console.log(response)
+  mail
+  .send(data)
+  .then(() => {
+    console.log('Email sent')
+  })
+  .catch((error) => {
+    console.error(error)
   })
 
   res.status(200).json({status: "OK"})
