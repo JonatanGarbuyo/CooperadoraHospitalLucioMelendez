@@ -12,6 +12,7 @@
   flex-direction: column;
   padding-bottom: 2em;
   font-size: 1.5em;
+  color: hsl(213deg 87% 21%);
 }
 
 .titulo{
@@ -30,54 +31,37 @@
   opacity: 0.8;
 }
 
-.titulo  h1 {
+.titulo h1 {
   font-size: 3rem;
 }
 
 .la_cooperadora{
   max-width: 90%;
-}
-
-.la_cooperadora > p {
-  color: hsl(213deg 87% 21%);
   background-color: #fafafa;
   padding: 10px;
-  font-weight: 600;
 }
 
-
-.nosotros {
-  max-width: 90%;
+.la_cooperadora h3{
+  margin-top: 2.5rem;
 }
 
-.nosotros > h3 {
-  color: hsl(213deg 87% 21%);
-  background-color: #fafafa;
-  padding: 10px;
-  font-weight: 600;
+.la_cooperadora p{
+  text-indent: 1rem; 
   margin-bottom: 0;
-}
-
-.nosotros > p {
-  color: hsl(213deg 87% 21%);
-  background-color: #fafafa;
-  padding: 10px;
+  margin-top: 0;
 }
 
 .firma{
   width: 100%;
   text-align: right;
+  margin-top: 2.5rem;
 }
 
 
 
 
 @media (max-width: 768px) {
-  .la_cooperadora > p {
-    font-size: 1em;
-  }
-
-  .contacto h3 {
+  .la_cooperadora {
     font-size: 1rem;
   }
 }
