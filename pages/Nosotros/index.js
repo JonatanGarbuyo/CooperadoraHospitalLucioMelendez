@@ -147,9 +147,8 @@ export default function Donar() {
           </p>
           <p>¡A todos ellos les decimos Muchas Gracias de Corazón!</p>
 
-          <p id="firma"  className={styles.firma}>LA COMISIÓN DIRECTIVA DE LA ASOCIACIÓN COOPERADORA</p>
-
         </section>
+        <p id="firma" className={styles.firma}>LA COMISIÓN DIRECTIVA DE LA ASOCIACIÓN COOPERADORA</p>
 
       </div>
 

@@ -52,7 +52,7 @@
 }
 
 .firma{
-  width: 100%;
+  width: 90%;
   text-align: right;
   margin-top: 2.5rem;
 }
@@ -62,6 +62,10 @@
 
 @media (max-width: 768px) {
   .la_cooperadora {
+    font-size: 1rem;
+  }
+
+  .firma{
     font-size: 1rem;
   }
 }
