@@ -8,7 +8,8 @@ export default async (req, res) => {
     Message: ${req.body.message}\r\n
     `
   const data = {
-    to: "cooperadoraluciomelendez@gmail.com",
+    // to: "cooperadoraluciomelendez@gmail.com",
+    to: "jonatangarbuyo@gmail.com",
     from: "cooperadoraluciomelendez.dev@gmail.com",
     subject: `Nuevo mensaje desde: ${req.body.email}`,
     text: message,
