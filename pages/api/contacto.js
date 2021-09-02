@@ -18,8 +18,8 @@ export default async (req, res) => {
 
   mail
   .send(data)
-  .then(() => {
-    console.log('Email sent')
+  .then((response) => {
+    console.log('Email sent', response)
   })
   .catch((error) => {
     console.error(error)
