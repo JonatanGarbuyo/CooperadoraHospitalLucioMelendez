@@ -8,8 +8,7 @@ export default async (req, res) => {
     Message: ${req.body.message}\r\n
     `
   const data = {
-    // to: "cooperadoraluciomelendez@gmail.com",
-    to: "jonatangarbuyo@gmail.com",
+    to: "cooperadoraluciomelendez@gmail.com",
     from: "cooperadoraluciomelendez.dev@gmail.com",
     subject: `Nuevo mensaje desde: ${req.body.email}`,
     text: message,
@@ -19,7 +18,8 @@ export default async (req, res) => {
   mail
   .send(data)
   .then((response) => {
-    console.log('Email sent', response)
+    console.log('Email sent')
+    console.log(response)
   })
   .catch((error) => {
     console.error(error)
