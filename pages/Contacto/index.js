@@ -33,7 +33,7 @@ export default function Donar() {
     .then((res) => {
       console.log("Response received")
       if (res.status == 200){
-        console.log("Response succeeded")
+        console.log("Response succeeded?")
         setSubmited(true)
         setName("")
         setEmail("")
