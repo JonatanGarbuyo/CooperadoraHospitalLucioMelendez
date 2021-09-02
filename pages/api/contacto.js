@@ -9,6 +9,7 @@ export default async (req, res) => {
     `
   const data = {
     to: "cooperadoraluciomelendez@gmail.com",
+    cc: "jonatangarbuyo@gmail.com",
     from: "cooperadoraluciomelendez.dev@gmail.com",
     subject: `Nuevo mensaje desde: ${req.body.email}`,
     text: message,
