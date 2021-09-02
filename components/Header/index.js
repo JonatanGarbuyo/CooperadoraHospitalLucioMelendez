@@ -1,5 +1,6 @@
 import {useState} from "react";
 import Link from 'next/link'
+import Image from 'next/image'
 
 import styles from "./index.module.css";
 
@@ -35,7 +36,9 @@ export default function Header() {
         <div className={styles.nav_mobile}>
           <Link href="/">
             <a className={styles.logo_a}>
-              <img className={styles.logo_img}
+              <Image className={styles.logo_img}
+                height="100"
+                width="400"
                 src="/images/coop_logo_2.png"
                 alt="Asociacion Cooperadora Lucio Melendez logo"
               />

@@ -11,10 +11,6 @@
   border-radius: 0px 0px 20px 20px;
 }
 
-.footer img {
-  margin: 0.5rem;
-}
-
 .footer a {
   display: flex;
   justify-content: center;
@@ -24,6 +20,7 @@
 
 .logo {
   height: 0.75em;
+  margin: 0.5rem;
 }
 
 .contact_info {
