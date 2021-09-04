@@ -9,8 +9,8 @@ export default function (req, res){
       user: 'cooperadoraluciomelendez.dev@gmail.com',
       pass: process.env.EMAIL_PASSWORD,
     },
-    // debug: true, // show debug output
-    // logger: true // log information in console
+    debug: true, // show debug output
+    logger: true // log information in console
   })
 
   const message = `
@@ -21,7 +21,8 @@ export default function (req, res){
 
   const mailData = {
     from: 'cooperadoraluciomelendez.dev@gmail.com',
-    to: 'cooperadoraluciomelendez@gmail.com',
+    // to: 'cooperadoraluciomelendez@gmail.com',
+    to: 'jonatangarbuyo@gmail.com',
     subject: `Message From ${req.body.name}`,
     text: message,
     html: message.replace(/\r\n/g, "<br />")
