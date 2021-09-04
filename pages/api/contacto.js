@@ -21,8 +21,8 @@ export default function (req, res){
 
   const mailData = {
     from: 'cooperadoraluciomelendez.dev@gmail.com',
-    // to: 'cooperadoraluciomelendez@gmail.com',
-    to: 'jonatangarbuyo@gmail.com',
+    to: 'cooperadoraluciomelendez@gmail.com',
+    // to: 'jonatangarbuyo@gmail.com',
     subject: `Message From ${req.body.name}`,
     text: message,
     html: message.replace(/\r\n/g, "<br />")
