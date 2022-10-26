@@ -63,9 +63,12 @@
 }
 
 .mercadopago_wrapper{
+  position: relative;
   composes: text;
   text-align: left;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: row;
   padding: 1rem 4rem;
 }
@@ -76,10 +79,16 @@
 
 .mercadopago_logo_wrapper{
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0px;
+  gap: 2rem;
+  
 }
 
 .mercadopago_logo_wrapper img{
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 .mercadopago_qr {
