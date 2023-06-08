@@ -6,31 +6,31 @@ const ContentSecurityPolicy = `
  `
 
 const securityHeaders = () => [
-  {
-    key: 'X-Content-Type-Options',
-    value: 'nosniff',
-  },
-  {
-    key: 'X-Frame-Options',
-    value: 'SAMEORIGIN',
-  },
-  {
-    key: 'X-XSS-Protection',
-    value: '1; mode=block',
-  },
-  {
-    key: 'Content-Security-Policy',
-    value: ContentSecurityPolicy.replace(/\s{2,}/g, ' ').trim(),
-  },
+	{
+		key: 'X-Content-Type-Options',
+		value: 'nosniff',
+	},
+	{
+		key: 'X-Frame-Options',
+		value: 'SAMEORIGIN',
+	},
+	{
+		key: 'X-XSS-Protection',
+		value: '1; mode=block',
+	},
+	{
+		key: 'Content-Security-Policy',
+		value: ContentSecurityPolicy.replace(/\s{2,}/g, ' ').trim(),
+	},
 ]
 
 module.exports = {
-  async headers() {
-    return [
-      {
-        source: '/:path*',
-        headers: securityHeaders(),
-      },
-    ]
-  },
+	async headers() {
+		return [
+			{
+				source: '/:path*',
+				headers: securityHeaders(),
+			},
+		]
+	},
 }
