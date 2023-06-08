@@ -1,6 +1,55 @@
+:root {
+  --color-white: #fafffd;
+  --color-gray: #98afba;
+  --color-black: #1e2a34;
+  --color-blue: #0066aa;
+  --color-ligth-blue: #59a5d8;
+  --color-yellow: #ffdd82;
+  --color-red: #fd2b4a;
+  --color-green: #094;
+  --color-lavender: #9999cc;
+
+  --color-secondary: #9ba9e0;
+  --color-accent: #fd4f9f;
+  --color-info: #007ac6;
+  --color-success: #00a066;
+  --color-alert: #f9d503;
+  --color-danger: #e63462;
+
+  --font-size-300: 0.75rem;
+  --font-size-400: 0.875rem;
+  --font-size-500: 1rem;
+  --font-size-600: 1.5rem;
+  --font-size-700: 2rem;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 600;
+  --font-weight-bold: 800;
+
+  --bg-color-primary: var(--color-white);
+  --bg-color-secondary: var(--color-blue);
+
+  --text-color-primary: var(--color-blue);
+  --text-color-secondary: var(--color-white);
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root:not([theme='light']) {
+    --bg-color-primary: var(--color-neutral-dark-blue);
+    --bg-color-secondary: var(--color-neutral-very-dark-blue);
+
+    --text-color-primary: var(--color-white);
+    --text-color-secondary: var(--color-neutral-light-gray);
+
+    --input-color: var(--color-neutral-light-gray);
+
+    --box-shadow: var(--color-neutral-dark-blue);
+  }
+} */
+
 html,
 body {
-  background-color: #08963a;
+  background-color: var(--color-green);
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -13,24 +62,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 * {
   box-sizing: border-box;
-}
-
-
-
-.svg_icon {
-  width: 1em;
-  height: 1em;
-}
-
-.svg_icon path,
-.svg_icon polygon,
-.svg_icon rect {
-  fill: hsl(213deg 87% 21%);
-}
-
-.svg_icon circle {
-  stroke: hsl(213deg 87% 21%);
-  stroke-width: 1;
 }
