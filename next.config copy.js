@@ -1,5 +1,7 @@
 const ContentSecurityPolicy = `
+   default-src 'self';
    img-src 'self' data:;
+  //  script-src 'self' ;
    connect-src 'self' vitals.vercel-insights.com ;
    style-src 'self' 'unsafe-inline' ;
    font-src 'self' ;  
