@@ -2,9 +2,9 @@ import Layout from '../components/Layout'
 import Banner from '../components/Banner'
 
 export default function Home() {
-  return (
-    <Layout>
-      <Banner />
-    </Layout>
-  )
+	return (
+		<Layout>
+			<Banner />
+		</Layout>
+	)
 }
