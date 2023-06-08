@@ -1,8 +1,4 @@
-.container{
-  composes: container from "/styles/Home.module.css";
-}
-
-.quienes_container{
+.quienes_container {
   width: 100%;
   max-width: 1200px;
   background-color: #fafafa;
@@ -15,7 +11,7 @@
   color: hsl(213deg 87% 21%);
 }
 
-.titulo{
+.titulo {
   width: 100%;
   height: 40vh;
   background-color: hsl(213deg 87% 21%);
@@ -35,35 +31,34 @@
   font-size: 3rem;
 }
 
-.la_cooperadora{
+.la_cooperadora {
   max-width: 90%;
   background-color: #fafafa;
   padding: 10px;
 }
 
-.la_cooperadora h3{
+.la_cooperadora h3 {
   margin-top: 2.5rem;
 }
 
-.la_cooperadora p{
-  text-indent: 1rem; 
+.la_cooperadora p {
+  text-indent: 1rem;
   margin-bottom: 0;
   margin-top: 0;
 }
 
-.firma{
+.firma {
   width: 90%;
   text-align: right;
   margin-top: 2.5rem;
 }
-
 
 @media (max-width: 768px) {
   .la_cooperadora {
     font-size: 1rem;
   }
 
-  .firma{
+  .firma {
     font-size: 1rem;
   }
 }
