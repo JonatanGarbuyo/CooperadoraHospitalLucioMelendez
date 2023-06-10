@@ -1,4 +1,7 @@
 import Image from 'next/image'
+import { AiFillEdit, AiFillDelete } from 'react-icons/ai'
+
+import styles from './index.module.css'
 
 export default function Page() {
 	const newsArray = [
@@ -41,20 +44,42 @@ export default function Page() {
 	return (
 		<section>
 			<header>
+				<span className={styles.breadcrumb}>{'Dashboard > Home'}</span>
 				<h1>Listado de novedades</h1>
 			</header>
-			<ul>
-				{newsArray.map((news) => {
-					return (
-						<li key={news.id}>
-							<Image src={news.image_url} alt="" height="100" width="200" />
-							<h2>{news.title}</h2>
-							<p>{news.description}</p>
-							<p>¿Está publicado? {news.is_published ? 'Sí' : 'No'}</p>
-						</li>
-					)
-				})}
-			</ul>
+			<table className={styles.table}>
+				<thead>
+					<tr>
+						<th>Imagen</th>
+						<th>Titulo</th>
+						<th>Descripción</th>
+						<th>Estado</th>
+						<th>Acciones</th>
+					</tr>
+				</thead>
+				<tbody>
+					{newsArray.map((news) => {
+						return (
+							<tr key={news.id}>
+								<td>
+									<Image src={news.image_url} alt="" height="100" width="200" />
+								</td>
+								<td>{news.title}</td>
+								<td>{news.description}</td>
+								<td>{news.is_published ? 'Publicado' : 'No Publicado'}</td>
+								<td>
+									<button className={styles.btn_edit}>
+										<AiFillEdit />
+									</button>
+									<button className={styles.btn_delete}>
+										<AiFillDelete />
+									</button>
+								</td>
+							</tr>
+						)
+					})}
+				</tbody>
+			</table>
 		</section>
 	)
 }
