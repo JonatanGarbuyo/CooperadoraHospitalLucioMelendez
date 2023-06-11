@@ -18,8 +18,8 @@ export default function Layout({ children }) {
 					<nav className={styles.navigation}>
 						<Image
 							className=""
-							height="100"
-							width="400"
+							height="80"
+							width="300"
 							src="/images/coop_logo_2.png"
 							alt="Asociacion Cooperadora Lucio Melendez logo"
 						/>
