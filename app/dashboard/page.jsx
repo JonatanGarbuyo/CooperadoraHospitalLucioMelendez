@@ -45,7 +45,10 @@ export default function Page() {
 		<section>
 			<header>
 				<span className={styles.breadcrumb}>{'Dashboard > Home'}</span>
-				<h1>Listado de novedades</h1>
+				<div className={styles.header_news}>
+					<h1>Listado de novedades</h1>
+					<button className={styles.btn_addnew}>Agregar Novedad</button>
+				</div>
 			</header>
 			<table className={styles.table}>
 				<thead>

@@ -2,6 +2,29 @@
     font-size: 0.75rem;
 }
 
+.header_news {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn_addnew {
+    padding: 0.8rem 4rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #009879;
+    color: white;
+    font-size: 11pt;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn_addnew:hover {
+    background-color: #00987ad1;
+}
+
 .table {
     border-collapse: collapse;
     margin: 25px 0;
