@@ -1,6 +1,6 @@
 const ContentSecurityPolicy = `
-   img-src 'self' data:;
-   connect-src 'self' vitals.vercel-insights.com ;
+   img-src 'self' res.cloudinary.com data:;
+   connect-src 'self' vitals.vercel-insights.com api.cloudinary.com ;
    style-src 'self' 'unsafe-inline' ;
    font-src 'self' ;  
  `
