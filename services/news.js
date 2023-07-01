@@ -1,4 +1,3 @@
-'use server'
 import { ErrorObject } from '../lib/error'
 import prisma from '../lib/prisma'
 
@@ -42,11 +41,30 @@ export async function addNews(data) {
 			createdAt,
 		}
 	} catch (error) {
-		// TODO: add proper error handlings
 		throw new ErrorObject({
-			message: 'Error connecting to database',
-			code: 500,
-			errors: [error],
+			message: 'An error occurred while processing the request.',
 		})
+	}
+}
+
+/**
+ * Deletes a news item from the database.
+ * @param {number} id - The ID of the news item to delete.
+ * @returns {Promise<void>} - A promise that resolves when the news item is deleted.
+ * @throws {ErrorObject} - Throws an error if there's a problem with the database connection or if the record to delete does not exist.
+ */
+export async function deleteNews(id) {
+	try {
+		return await prisma.news.delete({ where: { id } })
+	} catch (ex) {
+		const error = new ErrorObject({
+			message: 'An error occurred while processing the request.',
+		})
+
+		if (ex.code === 'P2025') {
+			error.message = 'Resource to delete does not exist.'
+			error.statusCode = 404
+		}
+		throw error
 	}
 }
