@@ -68,3 +68,27 @@ export async function deleteNews(id) {
 		throw error
 	}
 }
+
+export async function updateNews({ newsId, data }) {
+	try {
+		const { id, title, imageUrl, description, published, authorId, createdAt } =
+			await prisma.news.update({
+				where: { id: newsId },
+				data,
+			})
+
+		return {
+			id,
+			title,
+			imageUrl,
+			description,
+			published,
+			authorId,
+			createdAt,
+		}
+	} catch (error) {
+		throw new ErrorObject({
+			message: 'An error occurred while processing the request.',
+		})
+	}
+}
