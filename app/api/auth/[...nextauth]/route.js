@@ -3,7 +3,7 @@ import bcrypt from 'bcrypt'
 import CredentialsProvider from 'next-auth/providers/credentials'
 import prisma from '../../../../lib/prisma'
 
-const handler = NextAuth({
+export const authOptions = {
 	session: {
 		strategy: 'jwt',
 		maxAge: 30 * 24 * 60 * 60, // 30 days
@@ -44,8 +44,11 @@ const handler = NextAuth({
 	},
 
 	pages: {
-		error: '/dashboard/login',
+		signIn: '/login',
+		// error: '/login',
 	},
-})
+}
+
+const handler = NextAuth(authOptions)
 
 export { handler as GET, handler as POST }
