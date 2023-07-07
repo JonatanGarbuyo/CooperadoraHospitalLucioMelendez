@@ -69,6 +69,14 @@ export async function deleteNews(id) {
 	}
 }
 
+/**
+ * Updates a news item in the database.
+ * @param {Object} options - The options for updating the news item.
+ * @param {string} options.newsId - The ID of the news item to update.
+ * @param {News} options.data - The updated News object.
+ * @returns {Promise<AddedNews>} - A promise that resolves to the updated News object.
+ * @throws {ErrorObject} - Throws an error if there's a problem with the request to the database.
+ */
 export async function updateNews({ newsId, data }) {
 	try {
 		const { id, title, imageUrl, description, published, authorId, createdAt } =
@@ -76,7 +84,6 @@ export async function updateNews({ newsId, data }) {
 				where: { id: newsId },
 				data,
 			})
-
 		return {
 			id,
 			title,
