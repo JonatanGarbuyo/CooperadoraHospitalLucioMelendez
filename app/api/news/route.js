@@ -1,12 +1,10 @@
 // eslint-disable-next-line no-unused-vars
 import { NextRequest, NextResponse } from 'next/server'
-// eslint-disable-next-line no-unused-vars
-import { Schema, ValidationError } from 'yup'
 import prisma from '../../../lib/prisma'
-import { ErrorObject } from '../../../lib/error'
 import { newsSchema } from './schema'
 import { addNews } from '../../../services/news'
 import { validateUser } from '../../../lib/user'
+import { validateRequest } from '../../../lib/request'
 
 /**
  * Handles the GET request for retrieving news data.
@@ -34,28 +32,5 @@ export async function POST(req) {
 			{ message: ex.message, errors: ex.errors },
 			{ status: ex.statusCode }
 		)
-	}
-}
-
-/**
- * Validates the request body against a schema.
- * @param {NextRequest} req req - The request object.
- * @param {Schema} schema - The validation schema.
- * @returns {Promise<object>} The validated data.
- * @throws {ErrorObject} If the validation fails.
- */
-async function validateRequest(req, schema) {
-	try {
-		const body = await req.json()
-		return await schema.validate(body, {
-			stripUnknown: true,
-			abortEarly: false,
-		})
-	} catch (ex) {
-		const error = new ErrorObject({ message: ex.message })
-		if (ex instanceof ValidationError || ex instanceof SyntaxError) {
-			error.statusCode = 400
-		}
-		throw error
 	}
 }
