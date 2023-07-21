@@ -1,5 +1,6 @@
 import Image from 'next/image'
-import { AiFillEdit, AiFillDelete } from 'react-icons/ai'
+import { AiFillDelete } from 'react-icons/ai'
+import  UpdateNews  from '../../components/UpdateNews'
 
 import styles from './index.module.css'
 
@@ -47,7 +48,7 @@ export default function Page() {
 				<span className={styles.breadcrumb}>{'Dashboard > Home'}</span>
 				<div className={styles.header_news}>
 					<h1>Listado de novedades</h1>
-					<button className={styles.btn_addnew}>Agregar Novedad</button>
+					<UpdateNews mode={'add'} />
 				</div>
 			</header>
 			<table className={styles.table}>
@@ -71,9 +72,7 @@ export default function Page() {
 								<td>{news.description}</td>
 								<td>{news.is_published ? 'Publicado' : 'No Publicado'}</td>
 								<td>
-									<button className={styles.btn_edit}>
-										<AiFillEdit />
-									</button>
+									<UpdateNews mode={'edit'} news={news} />
 									<button className={styles.btn_delete}>
 										<AiFillDelete />
 									</button>
