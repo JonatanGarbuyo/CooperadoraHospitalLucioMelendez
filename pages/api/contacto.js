@@ -33,5 +33,5 @@ export default function (req, res) {
 		else console.log(info)
 	})
 
-	res.status(200).json({ status: 'OK' })
+	res.status(200).json({ status: 'OK' } )
 }
