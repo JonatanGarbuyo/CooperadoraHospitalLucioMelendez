@@ -2,8 +2,8 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 
 import styles from './layout.module.css'
-import LoginButton from '../../components/Dashboard/LoginButton'
-import Providers from '../../context/providers'
+import LoginButton from '@/components/Dashboard/LoginButton'
+import Providers from '@/context/providers'
 
 const inter = Inter({ subsets: ['latin'] })
 
