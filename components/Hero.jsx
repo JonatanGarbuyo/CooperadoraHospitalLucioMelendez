@@ -4,7 +4,7 @@ import coopHeroImg from '@/public/images/coop_hero_hd.webp'
 
 export default function Hero() {
 	return (
-		<section className="flex h-[calc(100svh-var(--header-height))] flex-col bg-primary pt-10">
+		<section className="flex h-[100svh] flex-col bg-primary pt-[calc(2.5rem+var(--header-height))]">
 			<div className="flex flex-col items-center justify-between gap-2 px-4">
 				<h1 className="text-center text-4xl font-bold tracking-tight text-white">
 					¡Ayudanos a Ayudar!
