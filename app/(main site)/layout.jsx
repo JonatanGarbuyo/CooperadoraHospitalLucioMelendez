@@ -14,7 +14,7 @@ const baloo = Baloo_2({ subsets: ['latin'], display: 'swap' })
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en" className={baloo.className}>
-			<body>
+			<body className="min-w-[375px]">
 				<MainHeader />
 				{children}
 			</body>
