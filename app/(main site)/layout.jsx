@@ -1,7 +1,7 @@
 // eslint-disable-next-line camelcase
 import { Baloo_2 } from 'next/font/google'
 import MainHeader from '@/components/MainHeader'
-import '../globals.css'
+import './main.css'
 
 export const metadata = {
 	title: 'Cooperadora Lucio Melendez',
