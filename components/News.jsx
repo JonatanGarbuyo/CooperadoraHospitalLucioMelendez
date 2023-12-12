@@ -43,7 +43,7 @@ export default function News() {
 					<li
 						key={item.id}
 						className=" flex
-                        flex-col gap-2 text-center [scroll-snap-align:center] [scroll-snap-stop:always]"
+                        flex-col gap-2 text-left [scroll-snap-align:center] [scroll-snap-stop:always]"
 					>
 						<div className="relative aspect-[3/2] w-[calc(100dvw-4rem)] overflow-hidden">
 							<Image
