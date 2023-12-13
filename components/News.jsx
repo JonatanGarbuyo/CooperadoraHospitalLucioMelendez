@@ -34,7 +34,7 @@ const data = [
 export default function News() {
 	return (
 		<section className="py-10">
-			<h2 className="mb-6 px-4 text-center text-2xl font-medium tracking-[-0.0075em]">
+			<h2 className="mb-6 px-4 text-center">
 				Lo que Hemos Logrado Gracias a{' '}
 				<span className="text-secondary">Tu Colaboración</span>
 			</h2>
@@ -53,10 +53,8 @@ export default function News() {
 								className="rounded-10 object-cover"
 							/>
 						</div>
-						<h3 className="text-xl font-medium">{item.title}</h3>
-						<p className="text-base font-normal tracking-[0.0075em] text-[#4A4A4A]">
-							{item.description}
-						</p>
+						<h3>{item.title}</h3>
+						<p>{item.description}</p>
 					</li>
 				))}
 			</ul>
