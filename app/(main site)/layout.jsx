@@ -2,6 +2,7 @@
 import { Baloo_2 } from 'next/font/google'
 import MainHeader from '@/components/MainHeader'
 import './main.css'
+import MainFooter from '@/components/MainFooter'
 
 export const metadata = {
 	title: 'Cooperadora Lucio Melendez',
@@ -14,9 +15,10 @@ const baloo = Baloo_2({ subsets: ['latin'], display: 'swap' })
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en" className={baloo.className}>
-			<body className="min-w-[375px]">
+			<body className="min-w-[320px]">
 				<MainHeader />
 				{children}
+				<MainFooter />
 			</body>
 		</html>
 	)
