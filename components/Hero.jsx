@@ -1,20 +1,22 @@
 import Image from 'next/image'
 import heartIcon from '@/public/images/heart_icon.svg'
 import coopHeroImg from '@/public/images/coop_hero_hd.webp'
+import DonationCard from './DonationCard'
 
 export default function Hero() {
 	return (
 		<section className="flex h-[100svh] flex-col bg-primary pt-[calc(2.5rem+var(--header-height))]">
-			<div className="flex flex-col items-center justify-between gap-2 px-4">
+			<div className="mb-4 flex flex-col items-center justify-between gap-2 px-4">
 				<h1 className="text-center text-white">¡Ayudanos a Ayudar!</h1>
 				<h3 className="text-center text-white">
 					Tu donación nos permite seguir ayudando a los que más lo necesitan.
 				</h3>
 			</div>
-			<button className="mb-2 mt-4 flex items-center justify-center gap-1 self-center rounded-10 bg-accent px-4 py-2 font-bold text-white">
+			<button className="mb-2 flex items-center justify-center gap-1 self-center rounded-10 bg-accent px-4 py-2 font-bold text-white md:hidden">
 				<Image src={heartIcon} alt="Icono de manos formando un corazón" />
 				<span>DONAR</span>
 			</button>
+			<DonationCard />
 			<div className="relative flex-1">
 				<Image
 					src={coopHeroImg}
