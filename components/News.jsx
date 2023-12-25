@@ -1,4 +1,9 @@
+'use client'
+
 import Image from 'next/image'
+import { useRef } from 'react'
+import ArrowLeft from './ArrowLeft'
+import ArrowRight from './ArrowRight'
 
 const data = [
 	{
@@ -32,20 +37,45 @@ const data = [
 ]
 
 export default function News() {
+	const sliderRef = useRef(null)
+
 	return (
-		<section className="py-10">
-			<h2 className="mb-6 px-4 text-center">
-				Lo que Hemos Logrado Gracias a{' '}
-				<span className="text-secondary">Tu Colaboración</span>
-			</h2>
-			<ul className="no-scrollbar flex gap-4 overflow-x-scroll px-8 [scroll-snap-type:x_mandatory]">
+		<section className="py-10 md:py-16">
+			<div className="mb-6 flex items-end justify-around px-4 md:mb-8 md:px-10">
+				<h2 className=" text-center md:text-left">
+					Lo que Hemos Logrado Gracias a{' '}
+					<span className="text-secondary">Tu Colaboración</span>
+				</h2>
+				<div className="flex gap-1 max-md:hidden">
+					<div
+						onClick={() => {
+							sliderRef.current.scrollLeft -= 300
+						}}
+						className="cursor-pointer"
+					>
+						<ArrowLeft />
+					</div>
+					<div
+						onClick={() => {
+							sliderRef.current.scrollLeft += 300
+						}}
+						className="cursor-pointer"
+					>
+						<ArrowRight />
+					</div>
+				</div>
+			</div>
+			<ul
+				className="no-scrollbar flex gap-4 overflow-x-scroll scroll-smooth px-8 [scroll-snap-type:x_mandatory] md:gap-8 md:px-10"
+				ref={sliderRef}
+			>
 				{data.map((item) => (
 					<li
 						key={item.id}
 						className=" flex
-                        flex-col gap-2 text-left [scroll-snap-align:center] [scroll-snap-stop:always]"
+                        flex-col gap-2 text-left [scroll-snap-align:center] [scroll-snap-stop:always] md:gap-4"
 					>
-						<div className="relative aspect-[3/2] w-[calc(100dvw-4rem)] overflow-hidden">
+						<div className="relative aspect-[3/2] w-[calc(100dvw-4rem)] max-w-[502px] overflow-hidden">
 							<Image
 								src={item.image}
 								alt={item.title}

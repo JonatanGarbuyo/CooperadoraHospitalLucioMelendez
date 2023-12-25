@@ -6,8 +6,8 @@ import DonationCard from './DonationCard'
 export default function Hero() {
 	return (
 		<section className="flex h-[100svh] flex-col bg-primary pt-[calc(2.5rem+var(--header-height))]">
-			<div className="mb-4 flex flex-col items-center justify-between gap-2 px-4">
-				<h1 className="text-center text-white">¡Ayudanos a Ayudar!</h1>
+			<div className="mx-auto mb-4 flex max-w-[80%] flex-col items-center justify-between gap-2 px-4">
+				<h1 className="text-center text-white">¡Ayudá con una Causa Noble!</h1>
 				<h3 className="text-center text-white">
 					Tu donación nos permite seguir ayudando a los que más lo necesitan.
 				</h3>
