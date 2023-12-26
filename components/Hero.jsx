@@ -5,10 +5,12 @@ import DonationCard from './DonationCard'
 
 export default function Hero() {
 	return (
-		<section className="flex h-[100svh] flex-col bg-primary pt-[calc(2.5rem+var(--header-height))]">
-			<div className="mx-auto mb-4 flex max-w-[80%] flex-col items-center justify-between gap-2 px-4">
-				<h1 className="text-center text-white">¡Ayudá con una Causa Noble!</h1>
-				<h3 className="text-center text-white">
+		<section className="flex h-[100svh] min-h-[568px] flex-col justify-between bg-primary pt-[calc(2.5rem+var(--header-height))] md:min-h-[1024px] lg:relative lg:min-h-[768px]">
+			<div className="mx-auto mb-4 flex max-w-[80%] flex-col items-center gap-2 px-4 lg:mx-10 lg:mb-0 lg:max-w-[55svw] lg:items-start lg:px-0">
+				<h1 className="text-center text-white lg:text-left">
+					¡Ayudá con una Causa Noble!
+				</h1>
+				<h3 className="text-center text-white lg:text-left">
 					Tu donación nos permite seguir ayudando a los que más lo necesitan.
 				</h3>
 			</div>
@@ -17,7 +19,7 @@ export default function Hero() {
 				<span>DONAR</span>
 			</button>
 			<DonationCard />
-			<div className="relative flex-1">
+			<div className="relative flex-1 ">
 				<Image
 					src={coopHeroImg}
 					alt="Foto de Inauguración Sala de Oncología"

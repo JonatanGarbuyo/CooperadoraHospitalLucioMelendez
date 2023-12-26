@@ -5,7 +5,7 @@ import heartIcon from '@/public/images/heart_icon.svg'
 
 export default function MainHeader() {
 	return (
-		<header className="h- fixed top-0 z-50 flex h-[--header-height] w-full items-center justify-between bg-primary px-4 shadow-sm md:px-6 ">
+		<header className="fixed top-0 z-50 flex h-[--header-height] w-full items-center justify-between bg-primary px-4 shadow-sm md:px-6 ">
 			<Image
 				src={logo}
 				alt="logo de la cooperadora hospital lucio melendez"
