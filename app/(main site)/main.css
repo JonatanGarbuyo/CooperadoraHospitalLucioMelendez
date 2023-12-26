@@ -28,7 +28,8 @@
 	h3 {
 		@apply text-balance text-xl font-medium md:text-3xl;
 	}
-	p {
+	p,
+	dt {
 		@apply text-base font-normal tracking-[0.0075em] text-gray md:text-xl;
 	}
 }
