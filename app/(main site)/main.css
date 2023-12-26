@@ -6,6 +6,12 @@
 	--header-height: 5rem;
 }
 
+@media (min-width: 768px) {
+	:root {
+		--header-height: 6rem;
+	}
+}
+
 .no-scrollbar::-webkit-scrollbar {
 	display: none;
 }
