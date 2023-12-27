@@ -66,7 +66,7 @@ export default function News() {
 				</div>
 			</div>
 			<ul
-				className="no-scrollbar flex gap-4 overflow-x-scroll scroll-smooth px-8 [scroll-snap-type:x_mandatory] md:gap-8 md:px-10"
+				className="no-scrollbar flex gap-4 overflow-y-hidden overflow-x-scroll scroll-smooth px-8 [scroll-snap-type:x_mandatory] md:gap-8 md:px-10"
 				ref={sliderRef}
 			>
 				{data.map((item) => (
