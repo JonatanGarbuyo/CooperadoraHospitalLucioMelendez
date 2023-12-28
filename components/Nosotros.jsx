@@ -22,7 +22,7 @@ export default function Nosotros() {
 					alt="Selfie grupal de los miembros de la cooperadora"
 					className="max-w-[50svw] max-lg:hidden"
 				/>
-				<div className="lg:px-10 lg:pt-16">
+				<div className="w-full lg:px-10 lg:pt-16">
 					<h2 className="mb-8 max-lg:hidden">Nosotros</h2>
 					<p className="text-balance text-lg font-medium text-white md:text-2xl">
 						La Asociación Cooperadora del Hospital Lucio Meléndez es una{' '}
@@ -42,7 +42,7 @@ export default function Nosotros() {
 						className="rounded-10 object-cover"
 					/>
 				</div>
-				<p className="self-center text-balance text-lg font-medium text-white md:text-2xl lg:px-10 lg:pb-10">
+				<p className="w-full self-center text-balance text-lg font-medium text-white md:text-2xl lg:px-10 lg:pb-10">
 					Nuestra Sede Central esta ubicada en el{' '}
 					<span className="font-bold">Hall Central del Hospital,</span> y la
 					atención es de{' '}

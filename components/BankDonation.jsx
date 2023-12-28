@@ -11,11 +11,11 @@ export default function BankDonation() {
 			</h2>
 			<div className="rounded-10 px-2 py-4 shadow-[0px_0px_4px_0px_rgba(0,0,0,0.1)] md:px-4 md:py-6">
 				<div className="mb-6 md:mb-0 md:border-b-[1px] md:border-stone-400 md:pb-6">
-					<p className="mb-4 text-balance text-xl font-medium text-black md:text-3xl">
+					<p className="mb-4 text-balance text-xl font-medium text-black md:mb-5 md:text-3xl">
 						Podés hacerlo mediante una{' '}
 						<span className="text-secondary">transferencia o depósito</span> a:
 					</p>
-					<dl className="flex flex-col gap-1 md:hidden [&>dd]:border-b-[1px] [&>dd]:border-stone-400 [&>dd]:pb-1 [&>dd]:text-lg [&>dd]:font-bold">
+					<dl className="flex flex-col gap-1 md:hidden md:gap-3 [&>dd]:border-b-[1px] [&>dd]:border-stone-400 [&>dd]:pb-1 [&>dd]:text-lg [&>dd]:font-bold ">
 						<dt>CUENTA CTE. BANCO PROVINCIA</dt>
 						<dd>5029-6693/6</dd>
 						<dt>TITULAR</dt>
@@ -46,7 +46,7 @@ export default function BankDonation() {
 					</ul>
 				</div>
 				<div>
-					<p className="mb-4 text-balance text-xl font-medium text-black md:mt-6 md:text-3xl">
+					<p className="mb-4 text-balance text-xl font-medium text-black md:mb-5 md:mt-6 md:text-3xl">
 						También podés donar desde tu teléfono escaneando el{' '}
 						<span className="text-secondary">código QR</span>
 					</p>
