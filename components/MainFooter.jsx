@@ -6,11 +6,11 @@ import { VscMail } from 'react-icons/vsc'
 
 export default function MainFooter() {
 	return (
-		<footer className="bg-primary px-4 py-8 md:flex md:flex-row-reverse md:px-6 md:py-12">
+		<footer className="bg-primary px-4 py-8 md:flex md:flex-row-reverse md:justify-between md:px-6 md:py-12">
 			<Image
 				src={logo}
 				alt="logo de la cooperadora hospital lucio melendez"
-				className="mx-auto w-full max-w-[300px] pb-6"
+				className="mx-auto w-full max-w-[300px] pb-6 md:mx-0"
 			/>
 			<div>
 				<ul className="flex flex-col gap-3 [&>li]:flex [&>li]:items-center [&>li]:gap-[10px] [&_p]:text-sm [&_p]:text-white [&_p]:md:text-lg">
