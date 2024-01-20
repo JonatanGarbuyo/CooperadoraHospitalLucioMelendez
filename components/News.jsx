@@ -40,8 +40,8 @@ export default function News() {
 	const sliderRef = useRef(null)
 
 	return (
-		<section className="py-10 md:py-16">
-			<div className="mb-6 px-4 md:mb-8 md:flex md:items-end md:justify-between md:px-10">
+		<section className="py-10 md:py-16 xl:py-24">
+			<div className="mb-6 px-4 md:mb-8 md:flex md:items-end md:justify-between md:px-10 xl:mb-12">
 				<h2 className="text-center md:text-left">
 					Lo que Hemos Logrado Gracias a{' '}
 					<span className="text-secondary">Tu Colaboración</span>
