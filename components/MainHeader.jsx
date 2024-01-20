@@ -6,13 +6,13 @@ import Link from 'next/link'
 
 export default function MainHeader() {
 	return (
-		<header className="fixed top-0 z-50 flex h-[--header-height] w-full items-center justify-between bg-primary px-4 shadow-sm md:px-6 ">
+		<header className="fixed top-0 z-50 flex h-[--header-height] w-full items-center justify-between bg-primary px-4 shadow-sm md:px-6 xl:px-8">
 			<Image
 				src={logo}
 				alt="logo de la cooperadora hospital lucio melendez"
 				className="md:w-[249px]"
 			/>
-			<div className="flex gap-12 text-lg font-medium text-white max-lg:hidden">
+			<div className="flex gap-12 text-lg font-medium text-white max-lg:hidden xl:text-xl">
 				<Link href="/" className="transition-colors hover:text-accent">
 					Home
 				</Link>
