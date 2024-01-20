@@ -19,6 +19,12 @@
 	}
 }
 
+@media (min-width: 1440px) {
+	:root {
+		--header-height: 7.5rem;
+	}
+}
+
 .no-scrollbar::-webkit-scrollbar {
 	display: none;
 }
