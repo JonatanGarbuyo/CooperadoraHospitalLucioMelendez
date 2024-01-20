@@ -2,7 +2,7 @@ import { FaExternalLinkAlt } from 'react-icons/fa'
 
 export default function DonationCard() {
 	return (
-		<div className="z-40 mb-2 flex max-h-[294px] min-h-[294px] min-w-[420px] max-w-[420px] items-center self-center rounded-10 bg-white text-center shadow-md max-md:hidden lg:absolute lg:right-10 lg:top-[calc(var(--hero-padding-top)+var(--header-height))] lg:mb-0">
+		<div className="z-40 mb-2 flex max-h-[294px] min-h-[294px] min-w-[420px] max-w-[420px] items-center self-center rounded-10 bg-white text-center shadow-md max-md:hidden lg:absolute lg:right-10 lg:top-[calc(var(--hero-padding-top)+var(--header-height))] lg:mb-0 2xl:right-16">
 			<div>
 				<p className="mb-4 text-3xl font-bold tracking-tight text-secondary">
 					¡DONÁ AHORA!
