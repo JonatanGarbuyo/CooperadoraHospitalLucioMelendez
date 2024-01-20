@@ -4,11 +4,18 @@
 
 :root {
 	--header-height: 5rem;
+	--hero-padding-top: 2.5rem;
 }
 
 @media (min-width: 768px) {
 	:root {
 		--header-height: 6rem;
+	}
+}
+
+@media (min-width: 1280px) {
+	:root {
+		--hero-padding-top: 3.5rem;
 	}
 }
 

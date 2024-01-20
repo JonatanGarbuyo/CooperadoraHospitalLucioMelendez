@@ -5,7 +5,7 @@ import DonationCard from './DonationCard'
 
 export default function Hero() {
 	return (
-		<section className="flex h-[100svh] min-h-[568px] flex-col justify-between bg-primary pt-[calc(2.5rem+var(--header-height))] md:min-h-[1024px] lg:relative lg:min-h-[768px]">
+		<section className="flex h-[100svh] min-h-[568px] flex-col justify-between bg-primary pt-[calc(var(--hero-padding-top)+var(--header-height))] md:min-h-[1024px] lg:relative lg:min-h-[768px]">
 			<div className="mx-auto mb-4 flex max-w-[80%] flex-col items-center gap-2 px-4 lg:mx-10 lg:mb-0 lg:max-w-[55svw] lg:items-start lg:px-0">
 				<h1 className="text-center text-white lg:text-left">
 					¡Ayudá con una Causa Noble!

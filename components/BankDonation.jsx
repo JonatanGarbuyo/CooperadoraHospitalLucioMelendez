@@ -4,7 +4,7 @@ import logoMP from '@/public/images/logo_mercado_pago.svg'
 
 export default function BankDonation() {
 	return (
-		<section className="flex flex-col items-center gap-6 px-4 py-10 text-center md:gap-8 md:px-10 md:py-16 xl:text-left">
+		<section className="flex flex-col items-center gap-6 px-4 py-10 text-center md:gap-8 md:px-10 md:py-16 xl:py-24 xl:text-left">
 			<h2 className="xl:self-start">
 				<span className="text-secondary">Donación Volunatria</span> para
 				colaborar con la compra de materiales

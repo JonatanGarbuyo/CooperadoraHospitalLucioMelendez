@@ -22,7 +22,7 @@ export default function Nosotros() {
 					alt="Selfie grupal de los miembros de la cooperadora"
 					className="max-w-[50svw] max-lg:hidden"
 				/>
-				<div className="w-full lg:px-10 lg:pt-16">
+				<div className="w-full lg:px-10 lg:pt-16 xl:pt-24">
 					<h2 className="mb-8 max-lg:hidden">Nosotros</h2>
 					<p className="text-balance text-lg font-medium text-white md:text-2xl xl:text-3xl">
 						La Asociación Cooperadora del Hospital Lucio Meléndez es una{' '}
