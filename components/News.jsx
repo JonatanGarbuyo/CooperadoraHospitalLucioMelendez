@@ -41,7 +41,7 @@ export default function News() {
 
 	return (
 		<section className="py-10 md:py-16 xl:py-24">
-			<div className="mb-6 px-4 md:mb-8 md:flex md:items-end md:justify-between md:px-10 xl:mb-12">
+			<div className="mb-6 px-4 md:mb-8 md:flex md:items-end md:justify-between md:px-10 xl:mb-12 2xl:px-16">
 				<h2 className="text-center md:text-left">
 					Lo que Hemos Logrado Gracias a{' '}
 					<span className="text-secondary">Tu Colaboración</span>
@@ -66,7 +66,7 @@ export default function News() {
 				</div>
 			</div>
 			<ul
-				className="no-scrollbar flex gap-4 overflow-y-hidden overflow-x-scroll scroll-smooth px-4 [scroll-snap-type:x_mandatory] md:gap-8 md:px-10"
+				className="no-scrollbar flex gap-4 overflow-y-hidden overflow-x-scroll scroll-smooth px-4 [scroll-snap-type:x_mandatory] md:gap-8 md:px-10 2xl:px-16"
 				ref={sliderRef}
 			>
 				{data.map((item) => (
