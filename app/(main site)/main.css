@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--header-height: 5rem;
+	--hero-padding-top: 2.5rem;
+}
+
+@media (min-width: 768px) {
+	:root {
+		--header-height: 6rem;
+	}
+}
+
+@media (min-width: 1280px) {
+	:root {
+		--hero-padding-top: 3.5rem;
+	}
+}
+
+@media (min-width: 1440px) {
+	:root {
+		--header-height: 7.5rem;
+	}
+}
+
+.no-scrollbar::-webkit-scrollbar {
+	display: none;
+}
+
+.no-scrollbar {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+@layer base {
+	html {
+		@apply text-black;
+	}
+	h1 {
+		@apply text-balance  text-4xl font-bold tracking-tight md:text-6xl xl:text-7xl 2xl:text-8xl;
+	}
+	h2 {
+		@apply text-balance text-2xl font-medium tracking-[-0.0075em] md:text-4xl xl:text-5xl;
+	}
+	h3 {
+		@apply text-balance text-xl font-medium md:text-3xl;
+	}
+	p,
+	dt {
+		@apply text-base font-normal tracking-[0.0075em] text-gray md:text-xl xl:text-2xl;
+	}
+}
