@@ -3,44 +3,18 @@ import { AiFillEdit, AiFillDelete } from 'react-icons/ai'
 
 import styles from './index.module.css'
 
-export default function Page() {
-	const newsArray = [
-		{
-			id: 1,
-			title: 'Noticia 1',
-			image_url: '/images/frente_del_hospital.png',
-			description: 'descripción 1',
-			is_published: true,
-		},
-		{
-			id: 2,
-			title: 'Noticia 2',
-			image_url: '/images/frente_del_hospital.png',
-			description: 'descripción 2',
-			is_published: true,
-		},
-		{
-			id: 3,
-			title: 'Noticia 3',
-			image_url: '/images/frente_del_hospital.png',
-			description: 'descripción 3',
-			is_published: true,
-		},
-		{
-			id: 4,
-			title: 'Noticia 4',
-			image_url: '/images/frente_del_hospital.png',
-			description: 'descripción 4',
-			is_published: true,
-		},
-		{
-			id: 5,
-			title: 'Noticia 5',
-			image_url: '/images/frente_del_hospital.png',
-			description: 'descripción 5',
-			is_published: true,
-		},
-	]
+async function getNews() {
+	try {
+		const response = await fetch('http://localhost:3000/api/news')
+		const { data } = await response.json()
+		return data
+	} catch (error) {
+		console.error(error)
+	}
+}
+
+export default async function Page() {
+	const newsArray = await getNews()
 	return (
 		<section>
 			<header>
@@ -65,11 +39,11 @@ export default function Page() {
 						return (
 							<tr key={news.id}>
 								<td>
-									<Image src={news.image_url} alt="" height="100" width="200" />
+									<Image src={news.imageUrl} alt="" height="100" width="200" />
 								</td>
 								<td>{news.title}</td>
 								<td>{news.description}</td>
-								<td>{news.is_published ? 'Publicado' : 'No Publicado'}</td>
+								<td>{news.published ? 'Publicado' : 'No Publicado'}</td>
 								<td>
 									<button className={styles.btn_edit}>
 										<AiFillEdit />
