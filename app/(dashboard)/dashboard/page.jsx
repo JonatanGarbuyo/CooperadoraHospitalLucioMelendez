@@ -42,7 +42,16 @@ export default async function Page() {
 									<Image src={news.imageUrl} alt="" height="100" width="200" />
 								</td>
 								<td>{news.title}</td>
-								<td>{news.description}</td>
+								<td>
+									<textarea
+										rows={6}
+										cols={60}
+										readOnly
+										className={styles.textarea}
+									>
+										{news.description}
+									</textarea>
+								</td>
 								<td>{news.published ? 'Publicado' : 'No Publicado'}</td>
 								<td>
 									<button className={styles.btn_edit}>

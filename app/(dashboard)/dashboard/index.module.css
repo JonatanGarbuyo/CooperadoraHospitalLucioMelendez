@@ -1,85 +1,96 @@
-.breadcrumb{
-    font-size: 0.75rem;
+.breadcrumb {
+	font-size: 0.75rem;
 }
 
 .header_news {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .btn_addnew {
-    padding: 0.8rem 4rem;
-    border: none;
-    border-radius: 5px;
-    background-color: #009879;
-    color: white;
-    font-size: 11pt;
-    font-weight: 600;
-    text-transform: uppercase;
-    cursor: pointer;
+	padding: 0.8rem 4rem;
+	border: none;
+	border-radius: 5px;
+	background-color: #009879;
+	color: white;
+	font-size: 11pt;
+	font-weight: 600;
+	text-transform: uppercase;
+	cursor: pointer;
 }
 
 .btn_addnew:hover {
-    background-color: #00987ad1;
+	background-color: #00987ad1;
 }
 
 .table {
-    border-collapse: collapse;
-    margin: 25px 0;
-    font-size: 0.9em;
-    min-width: 100%;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+	border-collapse: collapse;
+	margin: 25px 0;
+	font-size: 0.9em;
+	min-width: 100%;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
 .table thead tr {
-    background-color: #009879;
-    color: #ffffff;
-    text-align: left;
+	background-color: #009879;
+	color: #ffffff;
+	text-align: left;
 }
 
 .table th,
 .table td {
-    padding: 12px 15px;
-    width: 200px;
+	padding: 12px 15px;
+	width: 200px;
 }
 
 .table tbody tr {
-    border-bottom: 1px solid #dddddd;
+	border-bottom: 1px solid #dddddd;
 }
 
 .table tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
+	background-color: #f3f3f3;
 }
 
-.table tbody tr:last-of-type{
-    border-bottom: 2px solid #009879;
+.table tbody tr:last-of-type {
+	border-bottom: 2px solid #009879;
 }
 
 .btn_edit {
-    width: 2rem;
-    height: 2rem;
-    border: none;
-    border-radius: 50%;
-    margin-right: 0.5rem;
-    cursor: pointer;
-    transition: background-color 0.5s ease;
+	width: 2rem;
+	height: 2rem;
+	border: none;
+	border-radius: 50%;
+	margin-right: 0.5rem;
+	cursor: pointer;
+	transition: background-color 0.5s ease;
 }
 
-.btn_edit:hover{
-    background-color: #FFC300;
+.btn_edit:hover {
+	background-color: #ffc300;
 }
 
 .btn_delete {
-    width: 2rem;
-    height: 2rem;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.5s ease;
+	width: 2rem;
+	height: 2rem;
+	border: none;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: background-color 0.5s ease;
 }
 
-.btn_delete:hover{
-    background-color: #ff3700;
+.btn_delete:hover {
+	background-color: #ff3700;
+}
+
+.textarea {
+	padding: 10px 0;
+	border: 1px solid #dddddd;
+	border-radius: 5px;
+	resize: none;
+	font-family: inherit;
+	scrollbar-color: white #009879;
+	scrollbar-width: thin;
+	scrollbar-gutter: stable both-edges;
 }
