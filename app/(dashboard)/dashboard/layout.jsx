@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 
 import styles from './layout.module.css'
+import './main.css'
 import LoginButton from '@/components/Dashboard/LoginButton'
 import Providers from '@/context/providers'
 

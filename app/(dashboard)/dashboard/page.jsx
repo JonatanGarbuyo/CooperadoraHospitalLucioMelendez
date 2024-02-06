@@ -1,27 +1,42 @@
+'use client'
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { AiFillEdit, AiFillDelete } from 'react-icons/ai'
 
 import styles from './index.module.css'
+import AddNews from '@/components/AddNews'
+import { getNews } from '@/lib/newsRequests'
 
-async function getNews() {
-	try {
-		const response = await fetch('http://localhost:3000/api/news')
-		const { data } = await response.json()
-		return data
-	} catch (error) {
-		console.error(error)
-	}
-}
+export default function Page() {
+	const [newsArray, setNewsArray] = useState([])
+	const [addNewRow, setAddNewRow] = useState(false)
 
-export default async function Page() {
-	const newsArray = await getNews()
+	useEffect(() => {
+		async function fetchData() {
+			try {
+				const data = await getNews()
+				setNewsArray(data)
+			} catch (error) {
+				console.error(error)
+				alert(`Error al cargar las noticias: ${error.message}`)
+			}
+		}
+
+		fetchData()
+	}, [])
+
 	return (
 		<section>
 			<header>
 				<span className={styles.breadcrumb}>{'Dashboard > Home'}</span>
 				<div className={styles.header_news}>
 					<h1>Listado de novedades</h1>
-					<button className={styles.btn_addnew}>Agregar Novedad</button>
+					<button
+						className={styles.btn_addnew}
+						onClick={() => setAddNewRow(true)}
+					>
+						Agregar Novedad
+					</button>
 				</div>
 			</header>
 			<table className={styles.table}>
@@ -35,6 +50,9 @@ export default async function Page() {
 					</tr>
 				</thead>
 				<tbody>
+					{addNewRow && (
+						<AddNews setAddNewRow={setAddNewRow} setNewsArray={setNewsArray} />
+					)}
 					{newsArray.map((news) => {
 						return (
 							<tr key={news.id}>

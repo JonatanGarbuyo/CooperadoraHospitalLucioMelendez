@@ -31,7 +31,7 @@ export async function imageUploader({ file, signData }) {
 		)
 
 		if (!response.ok) {
-			throw new Error('Error al cargar la imagen' + response.statusText)
+			throw new Error(response.statusText)
 		}
 
 		return response.json()

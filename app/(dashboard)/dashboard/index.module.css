@@ -88,9 +88,8 @@
 	padding: 10px 0;
 	border: 1px solid #dddddd;
 	border-radius: 5px;
-	resize: none;
 	font-family: inherit;
-	scrollbar-color: white #009879;
+	scrollbar-color: #009879 #f3f3f3;
 	scrollbar-width: thin;
 	scrollbar-gutter: stable both-edges;
 }
