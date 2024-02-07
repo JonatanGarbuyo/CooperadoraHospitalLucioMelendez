@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import { NextRequest, NextResponse } from 'next/server'
 import prisma from '../../../lib/prisma'
-import { newsSchema } from './schema'
+import { newsSchema } from '../../../lib/newsSchema'
 import { addNews } from '../../../services/news'
 import { validateUser } from '../../../lib/user'
 import { validateRequest } from '../../../lib/request'

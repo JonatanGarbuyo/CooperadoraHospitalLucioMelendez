@@ -1,9 +1,13 @@
 import ImageUploader from '@/components/ImageUploader'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import Spinner from './Spinner'
 import { addNewsRequest, getNews } from '@/lib/newsRequests'
+import { newsSchema } from '@/lib/newsSchema'
 
 export default function AddNews({ setAddNewRow, setNewsArray }) {
+	const titleRef = useRef()
+	const descriptionRef = useRef()
+	const imageRef = useRef()
 	const [isLoading, setIsLoading] = useState(false)
 	const [news, setNews] = useState({
 		title: '',
@@ -14,8 +18,25 @@ export default function AddNews({ setAddNewRow, setNewsArray }) {
 
 	const handleSubmit = async () => {
 		try {
+			if (descriptionRef.current.value.length < 12) {
+				descriptionRef.current.setCustomValidity(
+					'La descripción debe tener al menos 12 caracteres'
+				)
+			} else {
+				descriptionRef.current.setCustomValidity('')
+			}
+
+			titleRef.current.reportValidity()
+			descriptionRef.current.reportValidity()
+			imageRef.current.reportValidity()
+			if (
+				!titleRef.current.checkValidity() ||
+				!descriptionRef.current.checkValidity()
+			)
+				return
+
 			setIsLoading(true)
-			console.log(news)
+			await newsSchema.validate(news, { abortEarly: false })			
 			await addNewsRequest(news)
 			const data = await getNews()
 			setNewsArray(data)
@@ -31,7 +52,7 @@ export default function AddNews({ setAddNewRow, setNewsArray }) {
 	return (
 		<tr className="relative">
 			<td>
-				<ImageUploader setNews={setNews} />
+				<ImageUploader setNews={setNews} imageRef={imageRef} />
 			</td>
 			<td>
 				<input
@@ -41,6 +62,10 @@ export default function AddNews({ setAddNewRow, setNewsArray }) {
 					onChange={(e) =>
 						setNews((prev) => ({ ...prev, title: e.target.value }))
 					}
+					required
+					minLength="4"
+					maxLength="32"
+					ref={titleRef}
 				/>
 			</td>
 			<td>
@@ -52,6 +77,9 @@ export default function AddNews({ setAddNewRow, setNewsArray }) {
 					onChange={(e) =>
 						setNews((prev) => ({ ...prev, description: e.target.value }))
 					}
+					required
+					maxLength="2048"
+					ref={descriptionRef}
 				/>
 			</td>
 			<td>

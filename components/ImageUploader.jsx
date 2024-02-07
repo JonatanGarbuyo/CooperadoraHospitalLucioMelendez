@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Spinner from './Spinner'
 
-export default function ImageUploader({ setNews }) {
+export default function ImageUploader({ setNews, imageRef }) {
 	const [isLoading, setIsLoading] = useState(false)
 	const { uploadImage, imageURI } = useImageUploader()
 
@@ -90,8 +90,10 @@ export default function ImageUploader({ setNews }) {
 					id="input-file"
 					type="file"
 					accept="image/*"
-					className="h-0 w-0 opacity-0"
+					className="absolute h-1 w-1 opacity-0"
 					onChange={inputHandler}
+					required
+					ref={imageRef}
 				/>
 			</label>
 		</div>
