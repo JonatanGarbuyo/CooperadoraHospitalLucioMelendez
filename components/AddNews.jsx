@@ -36,7 +36,7 @@ export default function AddNews({ setAddNewRow, setNewsArray }) {
 				return
 
 			setIsLoading(true)
-			await newsSchema.validate(news, { abortEarly: false })			
+			await newsSchema.validate(news, { abortEarly: false })
 			await addNewsRequest(news)
 			const data = await getNews()
 			setNewsArray(data)
@@ -68,11 +68,11 @@ export default function AddNews({ setAddNewRow, setNewsArray }) {
 					ref={titleRef}
 				/>
 			</td>
-			<td>
+			<td className="flex flex-col">
 				<textarea
 					rows={6}
 					cols={60}
-					className="border-gray-300 textarea-scrollbar rounded border border-[#ddd] pt-2"
+					className="border-gray-300 textarea-scrollbar mb-1 rounded border border-[#ddd] pt-2"
 					value={news.description}
 					onChange={(e) =>
 						setNews((prev) => ({ ...prev, description: e.target.value }))
@@ -81,6 +81,9 @@ export default function AddNews({ setAddNewRow, setNewsArray }) {
 					maxLength="2048"
 					ref={descriptionRef}
 				/>
+				<span className="self-end text-xs font-medium">
+					{news.description.length}/2048
+				</span>
 			</td>
 			<td>
 				<select
