@@ -98,20 +98,22 @@ export default function AddNews({ setAddNewRow, setNewsArray }) {
 				</select>
 			</td>
 			<td>
-				<button
-					className="mb-3 w-32 rounded bg-[#009879] px-4 py-2 font-semibold uppercase tracking-wider text-white hover:bg-[#00987ad1]"
-					onClick={handleSubmit}
-					disabled={isLoading}
-				>
-					Guardar
-				</button>
-				<button
-					className="w-32 rounded border-2 border-red-600 bg-white px-4 py-2 font-semibold uppercase tracking-wider text-red-600 hover:bg-red-600 hover:text-white"
-					onClick={() => setAddNewRow(false)}
-					disabled={isLoading}
-				>
-					Cancelar
-				</button>
+				<div className="flex flex-col place-items-center gap-3">
+					<button
+						className="w-32 rounded bg-[#009879] px-4 py-2 font-semibold uppercase tracking-wider text-white hover:bg-[#00987ad1]"
+						onClick={handleSubmit}
+						disabled={isLoading}
+					>
+						Guardar
+					</button>
+					<button
+						className="w-32 rounded border-2 border-red-600 bg-white px-4 py-2 font-semibold uppercase tracking-wider text-red-600 hover:bg-red-600 hover:text-white"
+						onClick={() => setAddNewRow(false)}
+						disabled={isLoading}
+					>
+						Cancelar
+					</button>
+				</div>
 				{isLoading && (
 					<div className="absolute inset-0 z-30 flex items-center justify-center bg-slate-50 bg-opacity-80 dark:bg-slate-700 dark:bg-opacity-80">
 						<Spinner />
