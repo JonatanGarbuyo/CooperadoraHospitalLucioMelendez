@@ -1,8 +1,14 @@
 import Image from 'next/image'
 import { AiFillEdit, AiFillDelete } from 'react-icons/ai'
 import styles from '@/app/(dashboard)/dashboard/index.module.css'
+import { deleteNewsRequest } from '@/lib/newsRequests'
 
-export default function NewsList({ news, setEditNews, editNews }) {
+export default function NewsList({
+	news,
+	setEditNews,
+	editNews,
+	setNewsArray,
+}) {
 	const handleEdit = () => {
 		if (editNews) {
 			return (
@@ -12,6 +18,18 @@ export default function NewsList({ news, setEditNews, editNews }) {
 			)
 		}
 		setEditNews(news.id)
+	}
+
+	const handleDelete = async () => {
+		if (confirm('Se eliminará la noticia')) {
+			try {
+				await deleteNewsRequest(news.id)
+				setNewsArray((prev) => prev.filter((item) => item.id !== news.id))
+			} catch (error) {
+				console.error(error.message)
+				alert(`Error al eliminar la noticia: ${error.message}`)
+			}
+		}
 	}
 
 	return (
@@ -33,7 +51,7 @@ export default function NewsList({ news, setEditNews, editNews }) {
 					<button className={styles.btn_edit} onClick={handleEdit}>
 						<AiFillEdit />
 					</button>
-					<button className={styles.btn_delete}>
+					<button className={styles.btn_delete} onClick={handleDelete}>
 						<AiFillDelete />
 					</button>
 				</div>
