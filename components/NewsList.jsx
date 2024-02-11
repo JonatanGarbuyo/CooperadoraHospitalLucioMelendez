@@ -29,12 +29,14 @@ export default function NewsList({ news, setEditNews, editNews }) {
 			</td>
 			<td>{news.published ? 'Publicado' : 'No Publicado'}</td>
 			<td>
-				<button className={styles.btn_edit} onClick={handleEdit}>
-					<AiFillEdit />
-				</button>
-				<button className={styles.btn_delete}>
-					<AiFillDelete />
-				</button>
+				<div className="flex items-center justify-center gap-2">
+					<button className={styles.btn_edit} onClick={handleEdit}>
+						<AiFillEdit />
+					</button>
+					<button className={styles.btn_delete}>
+						<AiFillDelete />
+					</button>
+				</div>
 			</td>
 		</tr>
 	)

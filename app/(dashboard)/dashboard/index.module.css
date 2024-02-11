@@ -61,9 +61,11 @@
 	height: 2rem;
 	border: none;
 	border-radius: 50%;
-	margin-right: 0.5rem;
 	cursor: pointer;
 	transition: background-color 0.5s ease;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .btn_edit:hover {
@@ -77,6 +79,9 @@
 	border-radius: 50%;
 	cursor: pointer;
 	transition: background-color 0.5s ease;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .btn_delete:hover {
