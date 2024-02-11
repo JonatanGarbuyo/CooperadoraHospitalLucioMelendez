@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Spinner from './Spinner'
 
-export default function ImageUploader({ setNews, imageRef }) {
+export default function ImageUploader({ setNews, imageRef, currentImg }) {
 	const [isLoading, setIsLoading] = useState(false)
 	const { uploadImage, imageURI } = useImageUploader()
 
@@ -44,7 +44,7 @@ export default function ImageUploader({ setNews, imageRef }) {
 
 	return (
 		<div
-			className="relative flex h-[150px] w-[200px] items-center justify-center"
+			className="relative flex aspect-[3/2] w-[200px] items-center justify-center"
 			onDrop={dropHandler}
 			onDragOver={(e) => e.preventDefault()}
 		>
@@ -57,7 +57,9 @@ export default function ImageUploader({ setNews, imageRef }) {
 						<Spinner />
 					</div>
 				)}
-				{imageURI ? (
+				{currentImg ? (
+					<Image src={currentImg} alt="Imagen" fill className="object-cover" />
+				) : imageURI ? (
 					<Image src={imageURI} alt="Imagen" fill className="object-cover" />
 				) : (
 					<div className="flex flex-col items-center justify-center">

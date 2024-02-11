@@ -1,15 +1,16 @@
 'use client'
 import { useEffect, useState } from 'react'
-import Image from 'next/image'
-import { AiFillEdit, AiFillDelete } from 'react-icons/ai'
 
 import styles from './index.module.css'
 import AddNews from '@/components/AddNews'
 import { getNews } from '@/lib/newsRequests'
+import NewsList from '@/components/NewsList'
+import UpdateNews from '@/components/UpdateNews'
 
 export default function Page() {
 	const [newsArray, setNewsArray] = useState([])
 	const [addNewRow, setAddNewRow] = useState(false)
+	const [editNews, setEditNews] = useState(null)
 
 	useEffect(() => {
 		async function fetchData() {
@@ -54,32 +55,10 @@ export default function Page() {
 						<AddNews setAddNewRow={setAddNewRow} setNewsArray={setNewsArray} />
 					)}
 					{newsArray.map((news) => {
-						return (
-							<tr key={news.id}>
-								<td>
-									<Image src={news.imageUrl} alt="" height="100" width="200" />
-								</td>
-								<td>{news.title}</td>
-								<td>
-									<textarea
-										rows={6}
-										cols={60}
-										readOnly
-										className={styles.textarea}
-									>
-										{news.description}
-									</textarea>
-								</td>
-								<td>{news.published ? 'Publicado' : 'No Publicado'}</td>
-								<td>
-									<button className={styles.btn_edit}>
-										<AiFillEdit />
-									</button>
-									<button className={styles.btn_delete}>
-										<AiFillDelete />
-									</button>
-								</td>
-							</tr>
+						return editNews === news.id ? (
+							<UpdateNews newsToUpdate={news} setEditNews={setEditNews} />
+						) : (
+							<NewsList key={news.id} news={news} setEditNews={setEditNews} />
 						)
 					})}
 				</tbody>
