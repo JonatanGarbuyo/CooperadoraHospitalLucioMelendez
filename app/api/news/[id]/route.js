@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { deleteNews, updateNews } from '../../../../services/news'
 import { validateUser } from '../../../../lib/user'
 import { validateRequest } from '../../../../lib/request'
-import { newsSchema } from '../schema'
+import { newsSchema } from '../../../../lib/newsSchema'
 
 /**
  * Handles the POST request for adding news.

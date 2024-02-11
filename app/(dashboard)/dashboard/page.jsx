@@ -1,53 +1,43 @@
-import Image from 'next/image'
-import { AiFillEdit, AiFillDelete } from 'react-icons/ai'
+'use client'
+import { useEffect, useState } from 'react'
 
 import styles from './index.module.css'
+import AddNews from '@/components/AddNews'
+import { getNews } from '@/lib/newsRequests'
+import NewsList from '@/components/NewsList'
+import UpdateNews from '@/components/UpdateNews'
 
 export default function Page() {
-	const newsArray = [
-		{
-			id: 1,
-			title: 'Noticia 1',
-			image_url: '/images/frente_del_hospital.png',
-			description: 'descripción 1',
-			is_published: true,
-		},
-		{
-			id: 2,
-			title: 'Noticia 2',
-			image_url: '/images/frente_del_hospital.png',
-			description: 'descripción 2',
-			is_published: true,
-		},
-		{
-			id: 3,
-			title: 'Noticia 3',
-			image_url: '/images/frente_del_hospital.png',
-			description: 'descripción 3',
-			is_published: true,
-		},
-		{
-			id: 4,
-			title: 'Noticia 4',
-			image_url: '/images/frente_del_hospital.png',
-			description: 'descripción 4',
-			is_published: true,
-		},
-		{
-			id: 5,
-			title: 'Noticia 5',
-			image_url: '/images/frente_del_hospital.png',
-			description: 'descripción 5',
-			is_published: true,
-		},
-	]
+	const [newsArray, setNewsArray] = useState([])
+	const [addNewRow, setAddNewRow] = useState(false)
+	const [editNews, setEditNews] = useState(null)
+
+	useEffect(() => {
+		async function fetchData() {
+			try {
+				const data = await getNews()
+				setNewsArray(data)
+			} catch (error) {
+				console.error(error)
+				alert(`Error al cargar las noticias: ${error.message}`)
+			}
+		}
+
+		fetchData()
+	}, [])
+
 	return (
 		<section>
 			<header>
 				<span className={styles.breadcrumb}>{'Dashboard > Home'}</span>
 				<div className={styles.header_news}>
 					<h1>Listado de novedades</h1>
-					<button className={styles.btn_addnew}>Agregar Novedad</button>
+					<button
+						className={styles.btn_addnew}
+						onClick={() => setAddNewRow(true)}
+					>
+						Agregar Novedad
+					</button>
 				</div>
 			</header>
 			<table className={styles.table}>
@@ -61,24 +51,24 @@ export default function Page() {
 					</tr>
 				</thead>
 				<tbody>
+					{addNewRow && (
+						<AddNews setAddNewRow={setAddNewRow} setNewsArray={setNewsArray} />
+					)}
 					{newsArray.map((news) => {
-						return (
-							<tr key={news.id}>
-								<td>
-									<Image src={news.image_url} alt="" height="100" width="200" />
-								</td>
-								<td>{news.title}</td>
-								<td>{news.description}</td>
-								<td>{news.is_published ? 'Publicado' : 'No Publicado'}</td>
-								<td>
-									<button className={styles.btn_edit}>
-										<AiFillEdit />
-									</button>
-									<button className={styles.btn_delete}>
-										<AiFillDelete />
-									</button>
-								</td>
-							</tr>
+						return editNews === news.id ? (
+							<UpdateNews
+								newsToUpdate={news}
+								setEditNews={setEditNews}
+								setNewsArray={setNewsArray}
+							/>
+						) : (
+							<NewsList
+								key={news.id}
+								news={news}
+								setEditNews={setEditNews}
+								editNews={editNews}
+								setNewsArray={setNewsArray}
+							/>
 						)
 					})}
 				</tbody>

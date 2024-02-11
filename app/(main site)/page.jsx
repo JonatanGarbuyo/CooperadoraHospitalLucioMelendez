@@ -1,7 +1,7 @@
-import BankDonation from '@/components/BankDonation'
-import Hero from '@/components/Hero'
-import News from '@/components/News'
-import Nosotros from '@/components/Nosotros'
+import BankDonation from '@/components/Home/BankDonation'
+import Hero from '@/components/Home/Hero'
+import News from '@/components/Home/News'
+import Nosotros from '@/components/Home/Nosotros'
 
 export default function Page() {
 	return (
