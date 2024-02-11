@@ -44,6 +44,10 @@ export default function UpdateNews({ newsToUpdate, setEditNews }) {
 		}
 	}
 
+	const handleCancel = () => {
+		confirm('Se perderán los cambios realizados.') && setEditNews(false)
+	}
+
 	return (
 		<tr className="relative">
 			<td>
@@ -107,7 +111,7 @@ export default function UpdateNews({ newsToUpdate, setEditNews }) {
 					</button>
 					<button
 						className="w-32 rounded border-2 border-red-600 bg-white px-4 py-2 font-semibold uppercase tracking-wider text-red-600 hover:bg-red-600 hover:text-white"
-						onClick={() => setEditNews(false)}
+						onClick={handleCancel}
 						disabled={isLoading}
 					>
 						Cancelar

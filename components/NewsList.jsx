@@ -2,7 +2,18 @@ import Image from 'next/image'
 import { AiFillEdit, AiFillDelete } from 'react-icons/ai'
 import styles from '@/app/(dashboard)/dashboard/index.module.css'
 
-export default function NewsList({ news, setEditNews }) {
+export default function NewsList({ news, setEditNews, editNews }) {
+	const handleEdit = () => {
+		if (editNews) {
+			return (
+				confirm(
+					'Actualmente estás editando una noticia, si comenzás a editar una nueva, se perderán los cambios de la edición actual.'
+				) && setEditNews(news.id)
+			)
+		}
+		setEditNews(news.id)
+	}
+
 	return (
 		<tr>
 			<td>
@@ -18,10 +29,7 @@ export default function NewsList({ news, setEditNews }) {
 			</td>
 			<td>{news.published ? 'Publicado' : 'No Publicado'}</td>
 			<td>
-				<button
-					className={styles.btn_edit}
-					onClick={() => setEditNews(news.id)}
-				>
+				<button className={styles.btn_edit} onClick={handleEdit}>
 					<AiFillEdit />
 				</button>
 				<button className={styles.btn_delete}>

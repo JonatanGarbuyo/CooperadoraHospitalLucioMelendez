@@ -58,7 +58,12 @@ export default function Page() {
 						return editNews === news.id ? (
 							<UpdateNews newsToUpdate={news} setEditNews={setEditNews} />
 						) : (
-							<NewsList key={news.id} news={news} setEditNews={setEditNews} />
+							<NewsList
+								key={news.id}
+								news={news}
+								setEditNews={setEditNews}
+								editNews={editNews}
+							/>
 						)
 					})}
 				</tbody>
