@@ -1,7 +1,7 @@
 import ImageUploader from '@/components/ImageUploader'
 import { useState, useRef } from 'react'
 import Spinner from './Spinner'
-import { addNewsRequest, getNews } from '@/lib/newsRequests'
+import { addNewsRequest } from '@/lib/newsRequests'
 import { newsSchema } from '@/lib/newsSchema'
 
 export default function AddNews({ setAddNewRow, setNewsArray }) {
@@ -37,9 +37,8 @@ export default function AddNews({ setAddNewRow, setNewsArray }) {
 
 			setIsLoading(true)
 			await newsSchema.validate(news, { abortEarly: false })
-			await addNewsRequest(news)
-			const data = await getNews()
-			setNewsArray(data)
+			const data = await addNewsRequest(news)
+			setNewsArray((prev) => [data, ...prev])
 			setAddNewRow(false)
 		} catch (error) {
 			console.error(error)
