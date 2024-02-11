@@ -56,7 +56,11 @@ export default function Page() {
 					)}
 					{newsArray.map((news) => {
 						return editNews === news.id ? (
-							<UpdateNews newsToUpdate={news} setEditNews={setEditNews} />
+							<UpdateNews
+								newsToUpdate={news}
+								setEditNews={setEditNews}
+								setNewsArray={setNewsArray}
+							/>
 						) : (
 							<NewsList
 								key={news.id}

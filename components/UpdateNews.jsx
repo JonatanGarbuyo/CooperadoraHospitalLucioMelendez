@@ -1,10 +1,14 @@
 import ImageUploader from '@/components/ImageUploader'
 import { useState, useRef } from 'react'
 import Spinner from './Spinner'
-import { addNewsRequest, getNews } from '@/lib/newsRequests'
+import { updateNewsRequest } from '@/lib/newsRequests'
 import { newsSchema } from '@/lib/newsSchema'
 
-export default function UpdateNews({ newsToUpdate, setEditNews }) {
+export default function UpdateNews({
+	newsToUpdate,
+	setEditNews,
+	setNewsArray,
+}) {
 	const titleRef = useRef()
 	const descriptionRef = useRef()
 	const imageRef = useRef()
@@ -23,22 +27,27 @@ export default function UpdateNews({ newsToUpdate, setEditNews }) {
 
 			titleRef.current.reportValidity()
 			descriptionRef.current.reportValidity()
+			if (news.imageUrl) {
+				imageRef.current.required = false
+			}
 			imageRef.current.reportValidity()
 			if (
 				!titleRef.current.checkValidity() ||
-				!descriptionRef.current.checkValidity()
+				!descriptionRef.current.checkValidity() ||
+				!imageRef.current.checkValidity()
 			)
 				return
 
 			setIsLoading(true)
 			await newsSchema.validate(news, { abortEarly: false })
-			await addNewsRequest(news)
-			const data = await getNews()
-			console.log(data)
+			const data = await updateNewsRequest(news)
+			setNewsArray((prev) =>
+				prev.map((item) => (item.id === news.id ? data : item))
+			)
 			setEditNews(false)
 		} catch (error) {
 			console.error(error)
-			alert(`Error al cargar la noticia: ${error.message}`)
+			alert(`Error al actualizar la noticia: ${error.message}`)
 		} finally {
 			setIsLoading(false)
 		}
