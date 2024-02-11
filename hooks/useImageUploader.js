@@ -4,18 +4,17 @@ import { getSignResponse, imageUploader } from '../services/getSignResponse'
 
 export default function useImageUploader() {
 	const [imageURI, setUploadedImage] = useState(null)
-	const [error, setError] = useState(null)
 
 	async function uploadImage({ file, folder }) {
 		try {
 			const signData = await getSignResponse({ folder })
 			const data = await imageUploader({ file, signData })
 
-			setUploadedImage(data)
+			await setUploadedImage(data.secure_url)
 		} catch (error) {
-			setError('Ocurrió un error al cargar la imagen: ' + error.message)
+			throw new Error(error)
 		}
 	}
 
-	return { uploadImage, imageURI, error }
+	return { uploadImage, imageURI }
 }
