@@ -15,7 +15,7 @@ export default function Page() {
 	useEffect(() => {
 		async function fetchData() {
 			try {
-				const data = await getNews()
+				const data = await getNews({ all: true })
 				setNewsArray(data)
 			} catch (error) {
 				console.error(error)

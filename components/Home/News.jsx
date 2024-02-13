@@ -1,43 +1,24 @@
 'use client'
-
 import Image from 'next/image'
-import { useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import ArrowLeft from './ArrowLeft'
 import ArrowRight from './ArrowRight'
-
-const data = [
-	{
-		image: '/images/apertura_sala_oncologia.png',
-		title: 'title1',
-		description:
-			'Lorem ipsum dolor sit amet consectetur. Laoreet lorem commodo tempus ut turpis sapien condimentum felis viverra.',
-		id: 1,
-	},
-	{
-		image: '/images/medicamentos.png',
-		title: 'title2',
-		description:
-			'Lorem ipsum dolor sit amet consectetur. Laoreet lorem commodo tempus ut turpis sapien condimentum felis viverra.',
-		id: 2,
-	},
-	{
-		image: '/images/charlas_pedagogicas.png',
-		title: 'title3',
-		description:
-			'Lorem ipsum dolor sit amet consectetur. Laoreet lorem commodo tempus ut turpis sapien condimentum felis viverra.',
-		id: 3,
-	},
-	{
-		image: '/images/elementos_laboratorio.png',
-		title: 'title4',
-		description:
-			'Lorem ipsum dolor sit amet consectetur. Laoreet lorem commodo tempus ut turpis sapien condimentum felis viverra.',
-		id: 4,
-	},
-]
+import { getNews } from '@/lib/newsRequests'
 
 export default function News() {
 	const sliderRef = useRef(null)
+	const [newsArray, setNewsArray] = useState([])
+
+	useEffect(() => {
+		;(async function fetchData() {
+			try {
+				const data = await getNews()
+				setNewsArray(data)
+			} catch (error) {
+				console.error(error)
+			}
+		})()
+	}, [])
 
 	return (
 		<section className="py-10 md:py-16 xl:py-24">
@@ -69,7 +50,7 @@ export default function News() {
 				className="no-scrollbar flex gap-4 overflow-y-hidden overflow-x-scroll scroll-smooth px-4 [scroll-snap-type:x_mandatory] md:gap-8 md:px-10 2xl:px-16"
 				ref={sliderRef}
 			>
-				{data.map((item) => (
+				{newsArray.map((item) => (
 					<li
 						key={item.id}
 						className=" flex
@@ -77,7 +58,7 @@ export default function News() {
 					>
 						<div className="relative aspect-[3/2] w-[calc(100dvw-4rem)] max-w-[502px] overflow-hidden">
 							<Image
-								src={item.image}
+								src={item.imageUrl}
 								alt={item.title}
 								fill
 								className="rounded-10 object-cover"

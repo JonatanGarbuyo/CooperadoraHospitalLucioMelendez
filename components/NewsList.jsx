@@ -41,9 +41,13 @@ export default function NewsList({
 			</td>
 			<td>{news.title}</td>
 			<td>
-				<textarea rows={6} cols={60} readOnly className={styles.textarea}>
-					{news.description}
-				</textarea>
+				<textarea
+					defaultValue={news.description}
+					rows={6}
+					cols={60}
+					readOnly
+					className={styles.textarea}
+				></textarea>
 			</td>
 			<td>{news.published ? 'Publicado' : 'No Publicado'}</td>
 			<td>

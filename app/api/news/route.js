@@ -10,8 +10,22 @@ import { validateRequest } from '../../../lib/request'
  * Handles the GET request for retrieving news data.
  * @returns {NextResponse} The response object containing the news data.
  */
-export async function GET() {
-	const data = await prisma.news.findMany()
+export async function GET(request) {
+	const searchParams = request.nextUrl.searchParams
+	const all = searchParams.get('all')
+
+	let data
+
+	if (all === 'true') {
+		data = await prisma.news.findMany()
+	} else {
+		data = await prisma.news.findMany({
+			where: {
+				published: true,
+			},
+		})
+	}
+
 	return NextResponse.json({ data })
 }
 
