@@ -1,7 +1,5 @@
 export async function getSignResponse({ folder = 'general' }) {
-	const response = await fetch(
-		`http://localhost:3000/api/signuploadform?folder=${folder}`
-	)
+	const response = await fetch(`/api/signuploadform?folder=${folder}`)
 	if (!response.ok) {
 		throw new Error('Error en la solicitud de firma')
 	}
