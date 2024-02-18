@@ -6,7 +6,10 @@ import miembrosDesktop2 from '@/public/images/miembros_desktop2.svg'
 
 export default function Nosotros() {
 	return (
-		<section className="flex flex-col gap-6 bg-primary px-4 py-10 text-center text-white md:gap-8 md:px-10 md:py-16 lg:gap-0 lg:p-0">
+		<section
+			className="flex flex-col gap-6 bg-primary px-4 py-10 text-center text-white md:gap-8 md:px-10 md:py-16 lg:gap-0 lg:p-0"
+			id="nosotros"
+		>
 			<h2 className="lg:hidden">Nosotros</h2>
 			<div className="lg:flex">
 				<div className="relative mx-auto mb-2 aspect-[3/2] w-full md:mb-4 lg:hidden">
