@@ -27,12 +27,8 @@ export default function Layout({ children }) {
 								src="/images/coop_logo_2.png"
 								alt="Asociacion Cooperadora Lucio Melendez logo"
 							/>
-							<ul className={styles.list}>
-								<li>Elemento 1</li>
-								<li>Elemento 2</li>
-								<li>Elemento 3</li>
-								<LoginButton />
-							</ul>
+
+							<LoginButton />
 						</nav>
 					</header>
 					<div className={styles.content}>{children}</div>

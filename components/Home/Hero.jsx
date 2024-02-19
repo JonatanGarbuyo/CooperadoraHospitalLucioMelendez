@@ -14,10 +14,14 @@ export default function Hero() {
 					Tu donación nos permite seguir ayudando a los que más lo necesitan.
 				</h3>
 			</div>
-			<button className="mb-2 flex items-center justify-center gap-1 self-center rounded-10 bg-accent px-4 py-2 font-bold text-white md:hidden">
+			<a
+				href="https://mpago.la/1sDpGAy"
+				target="_blank"
+				className="hover:bg-accentHover mb-2 flex items-center justify-center gap-1 self-center rounded-10 bg-accent px-4 py-2 font-bold text-white md:hidden"
+			>
 				<Image src={heartIcon} alt="Icono de manos formando un corazón" />
 				<span>DONAR</span>
-			</button>
+			</a>
 			<DonationCard />
 			<div className="relative flex-1 ">
 				<Image
