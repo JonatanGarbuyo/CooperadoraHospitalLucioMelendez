@@ -8,8 +8,8 @@ export default function DonationCard() {
 					¡DONÁ AHORA!
 				</p>
 				<p className="mx-2 mb-2 text-xl tracking-[-0.2px] text-primary">
-					Tu contribución es fundamental para el Hospital Público Lucio
-					Meléndez.
+					Tu contribución es fundamental para el desarrollo del Hospital Público
+					Lucio Meléndez.
 				</p>
 				{/* <div className="mb-4 h-[1.5px] w-full bg-[#E6E6E6]" /> */}
 				<p className="mb-2 text-lg font-bold tracking-[-0.18px] text-secondary">
