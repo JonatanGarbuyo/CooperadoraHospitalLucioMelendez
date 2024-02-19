@@ -6,16 +6,16 @@ export default function LoginButton() {
 	const { data: session } = useSession()
 	if (session) {
 		return (
-			<>
-				<p>Signed in as {session.user.name} </p>
-				<button onClick={() => signOut()}>Sign out</button>
-			</>
+			<div className="flex gap-4">
+				<p>Sesión iniciada como {session.user.name} </p>
+				<button onClick={() => signOut()}>Cerrar sesión</button>
+			</div>
 		)
 	}
 	return (
-		<>
-			<p>Not signed in </p>
-			<button onClick={() => signIn()}>Sign in</button>
-		</>
+		<div className="flex gap-6">
+			<p>Sesión no iniciada</p>
+			<button onClick={() => signIn()}>Iniciar sesión</button>
+		</div>
 	)
 }
