@@ -5,6 +5,7 @@
 :root {
 	--header-height: 5rem;
 	--hero-padding-top: 2.5rem;
+	overflow-x: hidden;
 }
 
 @media (min-width: 768px) {

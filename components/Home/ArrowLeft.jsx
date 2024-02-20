@@ -1,16 +1,24 @@
 export default function ArrowLeft() {
 	return (
 		<svg
-			width="52"
-			height="53"
-			viewBox="0 0 52 53"
 			xmlns="http://www.w3.org/2000/svg"
-			fill="#1E6DA2"
-			className="transition-all hover:fill-primary"
+			class="icon icon-tabler icon-tabler-square-chevron-left-filled"
+			width="50"
+			height="50"
+			viewBox="0 0 24 24"
+			stroke-width="1.5"
+			stroke="currentColor"
+			fill="none"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			className="transition-all hover:scale-[1.2] md:h-[65px] md:w-[65px]"
 		>
-			<path d="M26.0001 44.5343C16.2241 44.5343 8.32007 36.6303 8.32007 26.8543C8.32007 17.0783 16.2241 9.17426 26.0001 9.17426C35.7761 9.17426 43.6801 17.0783 43.6801 26.8543C43.6801 36.6303 35.7761 44.5343 26.0001 44.5343ZM26.0001 11.2543C17.3681 11.2543 10.4001 18.2223 10.4001 26.8543C10.4001 35.4863 17.3681 42.4543 26.0001 42.4543C34.6321 42.4543 41.6001 35.4863 41.6001 26.8543C41.6001 18.2223 34.6321 11.2543 26.0001 11.2543Z" />
-			<path d="M26.3121 36.9422L16.2241 26.8542L26.3121 16.7662L27.7681 18.2222L19.1361 26.8542L27.7681 35.4862L26.3121 36.9422Z" />
-			<path d="M17.6799 25.8143H35.3599V27.8943H17.6799V25.8143Z" />
+			<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+			<path
+				d="M19 2a3 3 0 0 1 3 3v14a3 3 0 0 1 -3 3h-14a3 3 0 0 1 -3 -3v-14a3 3 0 0 1 3 -3zm-5.293 6.293a1 1 0 0 0 -1.414 0l-3 3l-.083 .094a1 1 0 0 0 .083 1.32l3 3l.094 .083a1 1 0 0 0 1.32 -.083l.083 -.094a1 1 0 0 0 -.083 -1.32l-2.292 -2.293l2.292 -2.293l.083 -.094a1 1 0 0 0 -.083 -1.32z"
+				stroke-width="0"
+				fill="#1E6DA2"
+			/>
 		</svg>
 	)
 }
