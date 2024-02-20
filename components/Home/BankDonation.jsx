@@ -35,10 +35,10 @@ export default function BankDonation() {
 							TITULAR: <span>Asociación Cooperadora Htal. Lucio Melendez</span>
 						</li>
 						<li>
-							CBU: <span>coop.hosp.melendez</span>
+							CBU: <span>0140082301502900669363</span>
 						</li>
 						<li>
-							ALIAS: <span>5029-6693/6</span>
+							ALIAS: <span>coop.hosp.melendez</span>
 						</li>
 						<li>
 							CUIT: <span>33-67621770-9</span>
