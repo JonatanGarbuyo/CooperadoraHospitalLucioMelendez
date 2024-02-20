@@ -35,8 +35,11 @@
 }
 
 @layer base {
+	* {
+		@apply scroll-mt-[var(--header-height)];
+	}
 	html {
-		@apply text-black;
+		@apply scroll-smooth text-black;
 	}
 	h1 {
 		@apply text-balance  text-4xl font-bold tracking-tight md:text-6xl xl:text-7xl 2xl:text-8xl;
