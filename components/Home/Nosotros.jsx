@@ -27,7 +27,7 @@ export default function Nosotros() {
 				/>
 				<div className="w-full lg:px-10 lg:pt-16 xl:pt-24 2xl:px-16">
 					<h2 className="mb-8 max-lg:hidden">Nosotros</h2>
-					<p className="text-balance text-lg font-medium text-white md:text-2xl xl:text-3xl 2xl:text-4xl">
+					<p className="text-balance text-lg font-medium text-white sm:text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl">
 						La Asociación Cooperadora del Hospital Lucio Meléndez es una{' '}
 						<span className="font-bold">
 							Asociación Civil Sin Fines de Lucro.
@@ -45,7 +45,7 @@ export default function Nosotros() {
 						className="rounded-10 object-cover"
 					/>
 				</div>
-				<p className="w-full self-center text-balance text-lg font-medium text-white md:text-2xl lg:px-10 lg:pb-10 xl:text-3xl 2xl:px-16 2xl:text-4xl">
+				<p className="w-full self-center text-balance text-lg font-medium text-white sm:text-2xl md:text-3xl lg:px-10 lg:pb-10 xl:text-4xl 2xl:px-16 2xl:text-5xl">
 					Nuestra Sede Central esta ubicada en el{' '}
 					<span className="font-bold">Hall Central del Hospital,</span> y la
 					atención es de{' '}

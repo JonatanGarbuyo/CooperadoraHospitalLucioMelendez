@@ -2,7 +2,6 @@ import Image from 'next/image'
 import logo from '@/public/images/coop_new_logo.svg'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import heartIcon from '@/public/images/heart_icon.svg'
-import Link from 'next/link'
 
 export default function MainHeader() {
 	return (
@@ -13,19 +12,22 @@ export default function MainHeader() {
 				className="md:w-[249px] 2xl:w-[300px]"
 			/>
 			<div className="flex gap-12 text-lg font-medium text-white max-lg:hidden xl:text-xl">
-				<Link href="/" className="transition-colors hover:text-accent">
+				<a href="#" className="transition-colors hover:text-accent">
 					Home
-				</Link>
-				<Link href="#nosotros" className="transition-colors hover:text-accent">
+				</a>
+				<a href="#novedades" className="transition-colors hover:text-accent">
+					Novedades
+				</a>
+				<a href="#nosotros" className="transition-colors hover:text-accent">
 					Nosotros
-				</Link>
-				<Link href="#contacto" className="transition-colors hover:text-accent">
+				</a>
+				<a href="#contacto" className="transition-colors hover:text-accent">
 					Contacto
-				</Link>
+				</a>
 			</div>
 			<div className="flex items-center gap-2 md:gap-8">
 				<a
-					className="hover:bg-accentHover flex items-center gap-2 rounded-10 bg-accent px-4 py-1 font-bold text-white md:px-8 md:py-3 md:text-xl 2xl:px-10 2xl:py-3.5 2xl:text-2xl"
+					className="flex items-center gap-2 rounded-10 bg-accent px-4 py-1 font-bold text-white hover:bg-accentHover md:px-8 md:py-3 md:text-xl 2xl:px-10 2xl:py-3.5 2xl:text-2xl"
 					href="https://mpago.la/1sDpGAy"
 					target="_blank"
 				>
