@@ -6,7 +6,7 @@ export default function BankDonation() {
 	return (
 		<section className="flex flex-col items-center gap-6 px-4 py-10 text-center md:gap-8 md:px-10 md:py-16 lg:gap-12 xl:py-24 xl:text-left 2xl:px-16">
 			<h2 className="xl:self-start">
-				<span className="text-secondary">Donación Volunatria</span> para
+				<span className="text-secondary">Donación Voluntaria</span> para
 				colaborar con la compra de materiales
 			</h2>
 			<div className="relative rounded-10 px-2 py-4 shadow-[0px_1px_4px_1px_rgba(0,0,0,0.1)] md:px-4 md:py-7 xl:grid xl:grid-cols-2 xl:gap-8 2xl:gap-20 2xl:px-10 2xl:py-12">
@@ -19,11 +19,11 @@ export default function BankDonation() {
 						<dt>CUENTA CTE. BANCO PROVINCIA</dt>
 						<dd>5029-6693/6</dd>
 						<dt>TITULAR</dt>
-						<dd>Asociación Cooperadora Htal. Lucio Melendez</dd>
+						<dd>Asociación Cooperadora Htal. Lucio Meléndez</dd>
 						<dt>CBU</dt>
 						<dd>0140082301502900669363</dd>
 						<dt>ALIAS</dt>
-						<dd>coop.hosp.melendez</dd>
+						<dd>SARTEN.TECHO.REPTIL</dd>
 						<dt>CUIT</dt>
 						<dd>33-67621770-9</dd>
 					</dl>
