@@ -1,24 +1,20 @@
-'use client'
-import Image from 'next/image'
-import { useEffect, useRef, useState } from 'react'
-import ArrowLeft from './ArrowLeft'
-import ArrowRight from './ArrowRight'
-import { getNews } from '@/lib/newsRequests'
+import prisma from '@/lib/prisma'
 
-export default function News() {
-	const sliderRef = useRef(null)
-	const [newsArray, setNewsArray] = useState([])
+import NewsSlider from './NewsSlider'
 
-	useEffect(() => {
-		;(async function fetchData() {
-			try {
-				const data = await getNews()
-				setNewsArray(data)
-			} catch (error) {
-				console.error(error)
-			}
-		})()
-	}, [])
+async function getLatestNews() {
+	return prisma.news.findMany({
+		where: {
+			published: true,
+		},
+		take: 5,
+		orderBy: {
+			createdAt: 'desc',
+		},
+	})
+}
+export default async function News() {
+	const newsArray = await getLatestNews()
 
 	return (
 		<section className="relative py-10 md:py-16 xl:py-24" id="novedades">
@@ -28,51 +24,9 @@ export default function News() {
 					<span className="text-secondary">Tu Colaboración</span>
 				</h2>
 			</div>
-			{newsArray.length !== 0 && (
-				<div>
-					<div
-						onClick={() => {
-							sliderRef.current.scrollLeft -= 300
-						}}
-						// vertical centered
-						className="absolute left-3 top-1/2 z-10 -translate-y-1/2 transform cursor-pointer md:left-5"
-					>
-						<ArrowLeft />
-					</div>
-					<div
-						onClick={() => {
-							sliderRef.current.scrollLeft += 300
-						}}
-						className="absolute right-3 top-1/2 z-10 -translate-y-1/2 transform cursor-pointer md:right-5 "
-					>
-						<ArrowRight />
-					</div>
-				</div>
-			)}
-
-			<ul
-				className="no-scrollbar flex gap-4 overflow-y-hidden overflow-x-scroll scroll-smooth px-4 [scroll-snap-type:x_mandatory] md:gap-8 md:px-10 2xl:px-16"
-				ref={sliderRef}
-			>
-				{newsArray.map((item) => (
-					<li
-						key={item.id}
-						className=" flex
-                        max-w-[502px] flex-col gap-2 text-left [scroll-snap-align:center] [scroll-snap-stop:always] md:gap-4"
-					>
-						<div className="relative aspect-[3/2] w-[calc(100dvw-4rem)] max-w-[502px] overflow-hidden">
-							<Image
-								src={item.imageUrl}
-								alt={item.title}
-								fill
-								className="rounded-10 object-cover"
-							/>
-						</div>
-						<h3>{item.title}</h3>
-						<p>{item.description}</p>
-					</li>
-				))}
-			</ul>
+			<NewsSlider newsArray={newsArray} />
 		</section>
 	)
 }
+
+// export const revalidate = 60; // revalidate this page every 60 seconds
