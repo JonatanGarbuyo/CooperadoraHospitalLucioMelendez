@@ -17,11 +17,18 @@ export async function GET(request) {
 	let data
 
 	if (all === 'true') {
-		data = await prisma.news.findMany()
+		data = await prisma.news.findMany({
+			orderBy: {
+				createdAt: 'desc',
+			},
+		})
 	} else {
 		data = await prisma.news.findMany({
 			where: {
 				published: true,
+			},
+			orderBy: {
+				createdAt: 'desc',
 			},
 		})
 	}
