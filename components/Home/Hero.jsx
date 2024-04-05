@@ -10,14 +10,14 @@ export default function Hero() {
 				<h1 className="text-center text-white lg:text-left">
 					¡Ayudá con una Causa Noble!
 				</h1>
-				<h3 className="text-center text-white lg:text-left">
+				<p className="text-center text-3xl text-white lg:text-left">
 					Tu donación nos permite seguir ayudando a los que más lo necesitan.
-				</h3>
+				</p>
 			</div>
 			<a
 				href="https://mpago.la/1sDpGAy"
 				target="_blank"
-				className="hover:bg-accentHover mb-2 flex items-center justify-center gap-1 self-center rounded-10 bg-accent px-4 py-2 font-bold text-white md:hidden"
+				className="mb-2 flex items-center justify-center gap-1 self-center rounded-10 bg-accent px-4 py-2 font-bold text-white hover:bg-accentHover md:hidden"
 			>
 				<Image src={heartIcon} alt="Icono de manos formando un corazón" />
 				<span>DONAR</span>
