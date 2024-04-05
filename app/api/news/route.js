@@ -1,5 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import { NextRequest, NextResponse } from 'next/server'
+import { revalidatePath } from 'next/cache'
+
 import prisma from '../../../lib/prisma'
 import { newsSchema } from '../../../lib/newsSchema'
 import { addNews } from '../../../services/news'
@@ -47,6 +49,8 @@ export async function POST(req) {
 		const validatedNews = await validateRequest(req, newsSchema)
 		validatedNews.authorId = userId
 		const news = await addNews(validatedNews)
+		revalidatePath('/')
+
 		return NextResponse.json({ data: news }, { status: 201 })
 	} catch (ex) {
 		return NextResponse.json(

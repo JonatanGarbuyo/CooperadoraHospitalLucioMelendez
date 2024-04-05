@@ -1,5 +1,6 @@
 import { ErrorObject } from '../lib/error'
 import prisma from '../lib/prisma'
+import { revalidatePath } from 'next/cache'
 
 /**
  * @typedef {Object} News
@@ -31,6 +32,7 @@ export async function addNews(data) {
 		const { id, title, imageUrl, description, published, authorId, createdAt } =
 			await prisma.news.create({ data })
 
+		revalidatePath('/')
 		return {
 			id,
 			title,
@@ -55,7 +57,9 @@ export async function addNews(data) {
  */
 export async function deleteNews(id) {
 	try {
-		return await prisma.news.delete({ where: { id } })
+		const response = await prisma.news.delete({ where: { id } })
+		revalidatePath('/')
+		return response
 	} catch (ex) {
 		const error = new ErrorObject({
 			message: 'An error occurred while processing the request.',
@@ -84,6 +88,8 @@ export async function updateNews({ newsId, data }) {
 				where: { id: newsId },
 				data,
 			})
+		revalidatePath('/')
+
 		return {
 			id,
 			title,
