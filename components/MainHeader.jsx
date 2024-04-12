@@ -11,20 +11,33 @@ export default function MainHeader() {
 				alt="logo de la cooperadora hospital lucio melendez"
 				className="md:w-[249px] 2xl:w-[300px]"
 			/>
-			<div className="flex gap-12 text-lg font-medium text-white max-lg:hidden xl:text-xl">
-				<a href="#" className="transition-colors hover:text-accent">
-					Home
-				</a>
-				<a href="#novedades" className="transition-colors hover:text-accent">
-					Novedades
-				</a>
-				<a href="#nosotros" className="transition-colors hover:text-accent">
-					Nosotros
-				</a>
-				<a href="#contacto" className="transition-colors hover:text-accent">
-					Contacto
-				</a>
-			</div>
+			<nav>
+				<ul className="flex gap-12 text-lg font-medium text-white max-lg:hidden xl:text-xl">
+					<li>
+						<a href="#" className="transition-colors hover:text-accent">
+							Home
+						</a>
+					</li>
+					<li>
+						<a
+							href="#novedades"
+							className="transition-colors hover:text-accent"
+						>
+							Novedades
+						</a>
+					</li>
+					<li>
+						<a href="#nosotros" className="transition-colors hover:text-accent">
+							Nosotros
+						</a>
+					</li>
+					<li>
+						<a href="#contacto" className="transition-colors hover:text-accent">
+							Contacto
+						</a>
+					</li>
+				</ul>
+			</nav>
 			<div className="flex items-center gap-2 md:gap-8">
 				<a
 					className="flex items-center gap-2 rounded-10 bg-accent px-4 py-1 font-bold text-white hover:bg-accentHover md:px-8 md:py-3 md:text-xl 2xl:px-10 2xl:py-3.5 2xl:text-2xl"

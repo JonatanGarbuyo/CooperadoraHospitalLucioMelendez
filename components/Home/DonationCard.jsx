@@ -15,8 +15,8 @@ export default function DonationCard() {
 				<p className="mb-2 text-lg font-bold tracking-[-0.18px] text-secondary">
 					Donación por Única Vez
 				</p>
-				<ul className="flex items-center justify-center gap-3 font-extrabold text-accent transition-all [&_a]:flex [&_a]:items-center [&_a]:gap-4">
-					<li>
+				<div className="flex items-center justify-center gap-3 font-extrabold text-accent transition-all [&_a]:flex [&_a]:items-center [&_a]:gap-4">
+					<div>
 						<a
 							href="https://mpago.la/2BFVwq7"
 							target="_blank"
@@ -24,9 +24,9 @@ export default function DonationCard() {
 						>
 							ARS 1000 <FaExternalLinkAlt />
 						</a>
-					</li>
+					</div>
 					<FadedLine />
-					<li>
+					<div>
 						<a
 							href="https://mpago.la/1sDpGAy"
 							target="_blank"
@@ -34,9 +34,9 @@ export default function DonationCard() {
 						>
 							ARS 3000 <FaExternalLinkAlt />
 						</a>
-					</li>
+					</div>
 					<FadedLine />
-					<li>
+					<div>
 						<a
 							href="https://mpago.la/11TABB1"
 							target="_blank"
@@ -44,8 +44,8 @@ export default function DonationCard() {
 						>
 							ARS 5000 <FaExternalLinkAlt />
 						</a>
-					</li>
-				</ul>
+					</div>
+				</div>
 			</div>
 		</div>
 	)
