@@ -38,7 +38,7 @@ export default function BankDonation() {
 							CBU: <span>0140082301502900669363</span>
 						</li>
 						<li>
-							ALIAS: <span>coop.hosp.melendez</span>
+							ALIAS: <span>SARTEN.TECHO.REPTIL</span>
 						</li>
 						<li>
 							CUIT: <span>33-67621770-9</span>
