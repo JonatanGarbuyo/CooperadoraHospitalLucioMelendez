@@ -40,7 +40,7 @@ export default function NewsSlider({ newsArray }) {
 						className=" flex
                         max-w-[502px] flex-col gap-2 text-left [scroll-snap-align:center] [scroll-snap-stop:always] md:gap-4"
 					>
-						<div className="relative aspect-[3/2] w-[calc(100dvw-4rem)] max-w-[502px] overflow-hidden">
+						<div className="relative aspect-[3/2] w-[max(260px,_calc(100dvw-4rem))] max-w-[502px] overflow-hidden">
 							<Image
 								src={item.imageUrl}
 								alt={item.title}
