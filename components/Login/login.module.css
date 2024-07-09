@@ -1,0 +1,100 @@
+.maincard {
+	height: 35rem;
+	width: clamp(375px, 90vw, 32rem);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: white;
+	padding: 20px;
+	border-radius: 20px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	padding: 0rem 1rem;
+}
+
+.p_info {
+	margin-top: 0;
+	margin-bottom: 2rem;
+}
+
+.h1_title {
+	margin-bottom: 0.3rem;
+}
+
+.input {
+	margin-top: 0.5rem;
+	padding: 10px;
+	margin-bottom: 1rem;
+	border: none;
+	border-radius: 8px;
+	background-color: #f6f6f6;
+	color: #333;
+	font-size: 16px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	transition: box-shadow 0.3s ease;
+}
+.input::placeholder {
+	opacity: 0.5;
+}
+
+.input:focus {
+	outline: none;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.input:invalid:not(:focus) {
+	border: solid 1px red;
+}
+
+.btn {
+	padding: 0.7rem;
+	border: none;
+	cursor: pointer;
+	border-radius: 20px;
+	font-size: 12pt;
+	color: white;
+}
+.btn:active {
+	transform: translate(1px, 1px);
+}
+
+.btn_access {
+	background-color: #43975b;
+	margin-block: 1rem;
+}
+
+.btn_access:hover {
+	background-color: #4faa68;
+}
+
+.btn_comeback {
+	background-color: #9f9e9e;
+}
+
+.btn_comeback:hover {
+	background-color: #9f9e9ed2;
+}
+
+.input_error {
+	border: solid 1px red;
+}
+
+.spinner {
+	animation-name: spin;
+	animation-duration: 500ms;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
